@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="name">
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">tsinghua</property>
+		<property name="hibernate.connection.url">jdbc:mysql://202.112.183.19:3306/EOCS?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.default_catalog">EOCS</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping class="model.ExpertBankInfo" />
+		<mapping class="model.ExpertInfo" />
+		<mapping class="model.FirstLevel" />
+		<mapping class="model.InitialExpertInfo" />
+		<mapping class="model.Remark" />
+		<mapping class="model.RemarkId" />
+		<mapping class="model.Remark2" />
+		<mapping class="model.Remark2Id" />
+		<mapping class="model.SecondLevel" />
+		<mapping class="model.SystemConf" />
+		<mapping class="model.User" />
+		<mapping class="model.Top20" />
+	</session-factory>
+</hibernate-configuration>
