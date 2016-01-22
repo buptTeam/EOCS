@@ -188,23 +188,6 @@ dosubmitremarkBtn = function() {
 								setTimeout(url, 1500);
 					        });
 						}
-						
-						
-						
-//						$.messager.show({
-//							title : 'warning',
-//							msg : '恭喜您，问卷提交成功!请点击左侧导航，进入账户信息填写',
-//							timeout : 1500,
-//							showType : 'slide',
-//							style : {
-//								right : '',
-//								
-//								bottom : ''
-//							}
-//						});
-						//console.info("return version"+ obj.entity);
-						
-
 					}
 
 				}

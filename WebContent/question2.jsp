@@ -4,14 +4,10 @@
     String allids="";
     String allnames="";
     String firstidarrs="";
-    String isManualAdd="";
-    String ave="";
-    String areaave="";
-    String aveim="";
-    String areaaveim="";
-    String avecon="";
-    String areaavecon="";
-    int version=0;
+    
+    String ImportanceAve="";
+    String ProtectiveAve="";
+   
     if(request.getParameter("allids")==null){ %>
 <jsp:forward page="question1.jsp"/>
 <%} 
@@ -19,14 +15,10 @@
     	 allids=request.getParameter("allids");
     	 firstidarrs=request.getParameter("firstidarrs");
     	 allnames=request.getParameter("allnames");
-    	 isManualAdd=request.getParameter("isManualAdd");
-    	 ave=request.getParameter("ave");
-    	 areaave=request.getParameter("areaave");
-    	 aveim=request.getParameter("aveim");
-    	 areaaveim=request.getParameter("areaaveim");
-    	 avecon=request.getParameter("avecon");
-    	 areaavecon=request.getParameter("areaavecon");
-    	 version=Integer.valueOf( request.getParameter("version"));
+    	
+    	 ImportanceAve=request.getParameter("ImportanceAvearr");
+    	 ProtectiveAve=request.getParameter("ProtectiveAvearr");
+    	 
     }
 %>
     
@@ -100,21 +92,10 @@
                       <th>编号</th>
                       <th>重大疾病和健康问题</th>
                       <th>熟悉程度</th>
-                       <%if(version==2){ %>
-                      <th>全体专家均分</th>
-                      <th>领域专家均分</th>
-                      <%} %>
                       <th>重大程度</th>
-                       <%if(version==2){ %>
-                      <th>全体专家均分</th>
-                      <th>领域专家均分</th>
-                      <%} %>
+                      <th>专家均分</th>
                       <th>可预防程度</th>
-                       <%if(version==2){ %>
-                      <th>全体专家均分</th>
-                      <th>领域专家均分</th>
-                      <%} %>
-                      
+                      <th>专家均分</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -123,69 +104,42 @@
                   String[] idarr=allids.split(",");
                   String[] firstidarr=firstidarrs.split(",");
                   String[] namearr=allnames.split(",");
-                  String[] isManualAddarr=isManualAdd.split(",");
-                  String[] avearr=ave.split(",");
-                  String[] areaavearr=areaave.split(",");
-                  String[] aveimarr=aveim.split(",");
-                  String[] areaaveimarr=areaaveim.split(",");
-                  String[] aveconarr=avecon.split(",");
-                  String[] areaaveconarr=areaavecon.split(",");
-                  for(int i=0;i<idarr.length;i++){%>
+
+                  String[] ImportanceAvearr=ImportanceAve.split(",");
+                  String[] ProtectiveAvearr=ProtectiveAve.split(",");
+                 
+                  for(int i=1;i<idarr.length;i++){%>
                    
                 	  <tr  class="tr">
-                      <td> <%=i+1 %> </td>
+                      <td> <%=i %> </td>
                       <td> <%=namearr[i] %> </td>
                      
                       <td>
                       <input type="text" id="secondLevelId" name="secondLevelId" style="display:none" value="<%=idarr[i] %>">
                       <input type="text" name="firstLevelId" style="display:none" value="<%=firstidarr[i] %>">
                       <input type="text" name="sickName" style="display:none" value="<%=namearr[i]%>">
-                      <input type="text" name="isManualAdd" style="display:none" value="<%=isManualAddarr[i]%>">
-                      	
-                       		<input type="text" class="form-control" id="name" name="familiar" placeholder="请输入0-9的数字">
+                      <input type="text" name="isManualAdd" style="display:none" value="<%=0%>">
+                      <input type="text" class="form-control" id="name" name="familiar" placeholder="请输入0-9的数字">
                       		
                       		 
                       </td>
-                      <%if(version==2){ %>
-                      <td> <%=avearr[i] %></td>
-                      <td><%=areaavearr[i] %></td>
-                      <%} %>
                       <td>
                         <!-- Split button -->
                        
                           <input type="text" class="form-control" id="name" name="importance" placeholder="请输入0-9的数字">
-                     
-                        
-                         
-                          <!-- 
-                          <div class="checkbox col-md-offset-1" id="secondLevelDivTest" style="display:none" >
-  							<label>
-    						<input type="text" class="form-control" id="name" name="importance" placeholder="请输入0-9的数字">
-    						
-    						&nbsp;&nbsp;&nbsp;&nbsp;
-    						<font size="3" color="red" id="ave">1</font>
-    						
-  						</label>
-  						
-				</div>
-				 -->
+                
                       </td>
-                      <%if(version==2){ %>
-                      <td><%=aveimarr[i] %></td>
-                      <td><%=areaaveimarr[i] %></td>
-                      <%} %>
+
+                      <td><%=ImportanceAvearr[i] %></td>
+
                       <td>
                         <!-- Split button -->
-                      
                        	<input type="text" class="form-control" id="name" name="control" placeholder="请输入0-9的数字">
-                       
-                       	
-                        
+
                       </td>
-                      <%if(version==2){ %>
-                      <td><%=aveconarr[i] %></td>
-                      <td><%=areaaveconarr[i] %></td>
-                      <%} %>
+                   
+                      <td><%=ProtectiveAvearr[i] %></td>
+ 
                     </tr>  
               <%} %>
                            

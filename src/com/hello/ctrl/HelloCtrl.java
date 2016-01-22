@@ -717,4 +717,21 @@ public class HelloCtrl extends BaseCtrl {
 		}
 		writeJSon(response, mesString);
 	}
+	
+	public void getAllSick(HttpServletRequest request,
+			HttpServletResponse response) {
+		UserBean userBean = new UserBean();
+		String mesString = null;
+		try {
+				//mesString = userBean.addsecondLeveSick(request.getParameter("sickNmae"));
+			int uerid= (int) request.getSession().getAttribute("userId");
+			//String userName= request.getParameter("password");
+			mesString = userBean.getAllSick(uerid);
+			//
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		writeJSon(response, mesString);
+	}
 }

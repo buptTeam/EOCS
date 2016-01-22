@@ -42,6 +42,7 @@ import model.Remark2;
 import model.Remark2Id;
 import model.RemarkId;
 import model.SecondLevel;
+import model.SickList;
 import model.Top20;
 import model.User;
 import model.SystemConf;
@@ -1234,7 +1235,7 @@ public class UserBean extends HibernateBase {
 	//获取所有原始的二级指标
 	public List<SecondLevel> getAllSecondLevel() throws HibernateException {
 		try {
-			String queryString = "from SecondLevel where firstLevelId > 0";
+			String queryString = "from SecondLevel";
 			beginTransaction();
 			Query query = session.createQuery(queryString);
 			//query.setParameter(0, fitstLevelId);
@@ -1916,6 +1917,54 @@ public class UserBean extends HibernateBase {
 					
 					
               return ParseToReponse.parse("1", "OK", selectIds, selectIds.size());
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+					e.printStackTrace();
+					return ParseToReponse.parse("4", e.getMessage(), null, 0);
+				}
+			}
+		 
+		 public String getAllSick(int userId)
+					throws HibernateException {
+				try {
+					String queryString = "from SickList";
+					beginTransaction();
+					Query query = session.createQuery(queryString);
+					
+					List<SickList> sickList = query.list();
+					
+					queryString = "from Remark  as r where  r.id.userId=? and r.selected=? ";
+					beginTransaction();
+				    query = session.createQuery(queryString);
+					query.setParameter(0, userId);
+					query.setParameter(1, 1);
+					List<Remark> remark = query.list();
+					
+					List<HashMap> resList=new ArrayList();
+					for(int i=0;i<sickList.size();i++){
+						HashMap map=new HashMap();
+						map.put("Index", sickList.get(i).getIndex());
+						map.put("ImportanceAve", sickList.get(i).getImportanceAve());
+						map.put("ProtectiveAve", sickList.get(i).getProtectiveAve());
+						map.put("SecondId", sickList.get(i).getSecondId());
+						map.put("Zonghe", sickList.get(i).getZonghe());
+						map.put("SecondName", sickList.get(i).getSecondName());
+						map.put("isSeleted", 0);
+						resList.add(map);
+					}
+					for(int i=0;i<remark.size();i++){
+						for(int j=0;j<resList.size();j++){
+							//System.out.println(remark.get(i).getId().getSecondLevelId());
+							//System.out.println(Integer.parseInt( resList.get(j).get("SecondId").toString()));
+							if(remark.get(i).getId().getSecondLevelId()==Integer.parseInt( resList.get(j).get("SecondId").toString())){
+								resList.get(j).put("isSeleted", 1);
+								break;
+							}
+						}
+					}
+					
+           return ParseToReponse.parse("1", "OK", resList, resList.size());
 					
 				} catch (Exception e) {
 					// TODO: handle exception

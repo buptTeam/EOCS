@@ -25,7 +25,7 @@
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 
 
-    <script type="text/javascript" src="myjs/question1.js"></script>
+    <script type="text/javascript" src="myjs/newquestion1.js"></script>
     <script type="text/javascript"></script>
     
     <style type="text/css">  
@@ -67,7 +67,7 @@
 	 <div class="form-group">
 	 	<div class="col-sm-offset-4 ">
     	<font color="black" id="warning" size="3" >
-    	请选择您认为的<strong>20项</strong>重大疾病和健康问题。
+    	请选择您认为的<strong>20项</strong>重大疾病和健康问题。已选择<font id="countNumberAll"></font>项
     	<!-- 请从左侧一级指标中选择您希望评价的<strong>20项</strong>疾病，右上方<font color="red">红色数字</font>会提示您一共选择的数量哦。 -->
  
     	</font>
@@ -144,105 +144,19 @@
                       					
                     				</tr>
                   				</thead>
-                  				<tbody id="tbodytest">
-                  					<tr>
-                  						<th>1</th>
-                  						<th><input type="checkbox" value="" id="secondLevelCheckBox"></th>
-                  						<th>糖尿病</th>
-                  						<th>0.45</th>
-                  						<th>√</th>
+                  				<tbody id="treleSicktable">
+                  					<tr class="alltrsClass" id="treleSick2" style="display:none">
+                  						<th id="id">1</th>
+                  						<th><input type="checkbox" value="" id="secondLevelCheckBox"><font style="display:none" id="ProtectiveAve"></font>
+                  						<font style="display:none" id="ImportanceAve"></font></th>
+                  						<th id="name">糖尿病</th>
+                  						<th id="zhonghe">0.45</th>
+                  						<th id="select">√</th>
+                  						
                   					</tr>
                   				</tbody>
 							</table>
-							<!-- 
-				<div id="secondLevelDiv">
-				<div class="checkbox col-md-offset-1" id="secondLevelDivTest" style="display:none" >
-  					
-  					
-  					<label>
-  							
 							
-    						<input type="checkbox" value="" id="secondLevelCheckBox">
-    						&nbsp;
-    						<font size="3" id="name">name</font>
-    						<font style="display:none" id="id"> id</font>
-    						
-    						<font style="display:none" id="totalImportance"> id</font>
-    						<font style="display:none" id="totalFamiliar"> id</font>
-    						<font style="display:none" id="totalControll"> id</font>
-    						<font style="display:none" id="ave"> id</font>
-    						<font style="display:none" id="area_ave"> id</font>
-    						<font style="display:none" id="ave_im"> id</font>
-    						<font style="display:none" id="area_ave_im"> id</font>
-    						<font style="display:none" id="ave_con"> id</font>
-    						<font style="display:none" id="area_ave_con"> id</font>
-    						<font style="display:none" id="percentage"> id</font>
-    						&nbsp;&nbsp;&nbsp;&nbsp;
-    						<font size="3" color="red" id="alert1">已有</font>
-    						<font size="3" color="red" id="count"></font>
-    						<font size="3" color="red" id="alert2">人选择</font>
-    						
-  					</label>
-				</div>
-				</div>
-				<div id="hiddenadd" style="display:none">
-				<font color="red">如果您认为仍有重大问题未列入，请在此处添加：</font>
-				<div class="input-group" >
-					
-      				<input type="text" id="addSickText" class="form-control" placeholder="请自行填写上述遗漏重大疾病或健康问题">
-      				<span class="input-group-btn">
-       	 				<button class="btn btn-default" id="addSickBtn" type="button">添加</button>
-      				</span>
-    			</div>
-    			</div> -->
-			</div>
-		</div>
-		<!--  
-		<div class="col-md-4" id="selectedDiv">
-			<div class="text-center">
-				
-				<h5>
-					<strong>已选重大疾病和健康问题<font id="countNumberAll" size="3" color="red">3</font>项</strong>
-				</h5>
-				<br>
-			</div>
-			<hr>
-			<div class="table-bordered scroll" style="height:370px" id="selectedDivTest">		 
-				<!-- /input-group -->
-			
-			<!-- 已经选择的二级病症 -->
-			<!-- 
-			<div  class="alert alert-warning alert-dismissible" role="alert" id="selectedItrmTest" style="display:none; padding-bottom: 2px;padding-top: 2px;padding-left: 2px;margin-bottom: 2px;">
-  				
-  				<button id="disappear" type="button" class="close" data-dismiss="alert" aria-label="Close" >
-  				<span aria-hidden="true">&times;</span></button>
-  				<strong>
-  				<font id="name" size="1"></font>
-  				&nbsp;&nbsp;&nbsp;
-  				<font style="display:none" id="percentage" size="1">10%</font>
-  				&nbsp;&nbsp;&nbsp;
-  				<font style="display:none" id="correct" size="1" color="red">√</font>
-  				<font style="display:none" id="id">0</font>
-  				<font style="display:none" id="selectedFirstlevelid">0</font>
-  				<font style="display:none" id="isManualAdd">-1</font>
-  				<font style="display:none" id="count">0</font>
-    			<font style="display:none" id="totalImportance">0</font>
-    			<font style="display:none" id="totalFamiliar">0</font>
-    			<font style="display:none" id="totalControll">0</font>
-    			<font style="display:none" id="ave">0</font>
-    			<font style="display:none" id="area_ave">0</font>
-    			<font style="display:none" id="ave_im">0</font>
-    			<font style="display:none" id="area_ave_im">0</font>
-    			<font style="display:none" id="ave_con">0</font>
-    			<font style="display:none" id="area_ave_con">0</font>
-    			
-  				</strong> 
-  				
-			</div>
-			<font color="red">删除已选疾病，请点击名称后面的“×”</font>
-		</div>
-		</div>
-		-->
 	</div>
 
 </div>
@@ -260,17 +174,9 @@
               <input style="display:none" type="text" id="allids" name="allids">
                <input style="display:none" type="text" id="firstidarrs" name="firstidarrs">
 		      <input style="display:none" type="text" id="allnames" name="allnames">
-		      <input style="display:none" type="text" id="isManualAddinput" name="isManualAdd">
-
-		           <input style="display:none" type="text" id="avearr" name="ave">
-		            <input style="display:none" type="text" id="areaavearr" name="areaave">
-		            <input style="display:none" type="text" id="aveimarr" name="aveim">
-		            <input style="display:none" type="text" id="areaaveimarr" name="areaaveim">
-		            <input style="display:none" type="text" id="aveconarr" name="avecon">
-		            <input style="display:none" type="text" id="areaaveconarr" name="areaavecon">
-		            <input style="display:none" type="text" id="versionhidden" name="version">
- 
-  				请问确认提交已选择的<span></span>20项重大疾病或健康问题吗？
+		      <input style="display:none" type="text" id="ImportanceAvearr" name="ImportanceAvearr">
+		            <input style="display:none" type="text" id="ProtectiveAvearr" name="ProtectiveAvearr">
+                                                     请问确认提交已选择的<span></span>20项重大疾病或健康问题吗？
   				<br>
   				提交后将不能修改！
   				
@@ -377,26 +283,7 @@
 		</div>
 	</div>
 </div>
-			<!-- 
 			
-			<div class="form-group">
-				<label for="password" class="col-sm-4 control-label"><font size="4">设置新密码</font></label>
-				<div class="col-sm-5 ">
-					<input type="password"  class="form-control" id="password" name="password" placeholder="请输入您的密码" >
-				</div> 
-			</div>
-			<div class="form-group">
-				<label for="confirmpassword" class="col-sm-4 control-label "  ><font size="4">确认新密码</font></label>
-				<div class="col-sm-5 ">
-					<input type="password"  class="form-control easyui-validatebox"  id="password1" name="confirmpassword"  placeholder="请再次输入您的密码" >
-				</div>
-			</div>
-			<div class="form-group">
-				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">密码至少6位且必须由数字和字母组成!</font>
-				<br>
-				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">请牢记新密码，丢失无法找回！</font>
-			</div>
-			 -->
 		</div>
         <div class="modal-footer">
 			<!-- 
@@ -808,26 +695,7 @@
 		</div>
 	</div>
 </div>
-			<!-- 
 			
-			<div class="form-group">
-				<label for="password" class="col-sm-4 control-label"><font size="4">设置新密码</font></label>
-				<div class="col-sm-5 ">
-					<input type="password"  class="form-control" id="password" name="password" placeholder="请输入您的密码" >
-				</div> 
-			</div>
-			<div class="form-group">
-				<label for="confirmpassword" class="col-sm-4 control-label "  ><font size="4">确认新密码</font></label>
-				<div class="col-sm-5 ">
-					<input type="password"  class="form-control easyui-validatebox"  id="password1" name="confirmpassword"  placeholder="请再次输入您的密码" >
-				</div>
-			</div>
-			<div class="form-group">
-				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">密码至少6位且必须由数字和字母组成!</font>
-				<br>
-				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">请牢记新密码，丢失无法找回！</font>
-			</div>
-			 -->
 		</div>
         <div class="modal-footer">
 			<!-- 
