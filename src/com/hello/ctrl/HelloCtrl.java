@@ -26,7 +26,7 @@ import com.bean.UserBean;
 import com.opensymphony.xwork2.validator.annotations.RegexFieldValidator;
 
 public class HelloCtrl extends BaseCtrl {
-	// �ж��Ƿ����ʼ��б�
+	// 判断是否在邮件列表
 	public void checkInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -42,7 +42,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ��½���Ƿ���ʹ��
+	// 登陆名是否已使用
 	public void LoginNameIsExist(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -57,7 +57,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ר��ע�� type=4
+	// 专家注册 type=4
 	public void ExpertRegistry(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -74,7 +74,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ��ӳ�ר��������������Ա type=1 λ��������Ա 2 λ������Ա 3����ռ���Ա
+	// 添加除专家外的其他类的人员 type=1 位超级管理员 2 位财务人员 3数据收集人员
 	public void addOtherUser(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -91,7 +91,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ��½
+	// 登陆
 	public void login(HttpServletRequest request, HttpServletResponse response) {
 		UserBean userBean = new UserBean();
 		String mesString = null;
@@ -106,7 +106,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ����ר�һ���Ϣ
+	// 更新专家基本信息
 	public void updateExpertBasicInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -173,7 +173,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ����ר��������Ϣ
+	// 更新专家银行信息
 	public void updateExpertPostInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		System.out.println("here");
@@ -211,7 +211,7 @@ public class HelloCtrl extends BaseCtrl {
 		}
 		writeJSon(response, mesString);
 	}
-	//��ȡһ������
+	//获取一级分类
 	public void getFirstLevel(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -565,13 +565,13 @@ public class HelloCtrl extends BaseCtrl {
 		   while (itr.hasNext()) {
 		    FileItem item = (FileItem) itr.next();
 		    if (item.isFormField()) {
-		     System.out.println("�?������:" + item.getFieldName() + "���?����ֵ:" + item.getString("UTF-8"));
+		     System.out.println("表单参数名:" + item.getFieldName() + "，表单参数值:" + item.getString("UTF-8"));
 		    } else {
 		     if (item.getName() != null && !item.getName().equals("")) {
-		      System.out.println("�ϴ��ļ��Ĵ�С:" + item.getSize());
-		      System.out.println("�ϴ��ļ�������:" + item.getContentType());
-		      // item.getName()�����ϴ��ļ��ڿͻ��˵�����·�����
-		      System.out.println("�ϴ��ļ������:" + item.getName());
+		      System.out.println("上传文件的大小:" + item.getSize());
+		      System.out.println("上传文件的类型:" + item.getContentType());
+		      // item.getName()返回上传文件在客户端的完整路径名称
+		      System.out.println("上传文件的名称:" + item.getName());
 
 		      File tempFile = new File(item.getName());
 
@@ -579,12 +579,12 @@ public class HelloCtrl extends BaseCtrl {
 		      System.out.println(request.getSession().getServletContext().getRealPath("/download"));
 
 		      item.write(file);
-		      request.setAttribute("upload.message", "�ϴ��ļ��ɹ���");
+		      request.setAttribute("upload.message", "上传文件成功！");
 		      DataBean dBean=new DataBean();
 		      System.out.println("HelloCtrl.uploadFile()"+typeString);
 		      dBean.getData(request,item.getName(),typeString);
 		     }else{
-		      request.setAttribute("upload.message", "û��ѡ���ϴ��ļ���");
+		      request.setAttribute("upload.message", "没有选择上传文件！");
 		     }
 		    }
 		   }
@@ -592,7 +592,7 @@ public class HelloCtrl extends BaseCtrl {
 		   e.printStackTrace();
 		  } catch (Exception e) {
 		   e.printStackTrace();
-		   request.setAttribute("upload.message", "�ϴ��ļ�ʧ�ܣ�");
+		   request.setAttribute("upload.message", "上传文件失败！");
 		  }
 		  try {
 			  if(typeString == "1"){
@@ -717,6 +717,4 @@ public class HelloCtrl extends BaseCtrl {
 		}
 		writeJSon(response, mesString);
 	}
-
-	
 }
