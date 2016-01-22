@@ -24,5 +24,6 @@
 		<mapping class="model.SystemConf" />
 		<mapping class="model.User" />
 		<mapping class="model.Top20" />
+		<mapping class="model.SickList" />
 	</session-factory>
 </hibernate-configuration>

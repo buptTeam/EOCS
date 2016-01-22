@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//µ¼³öÊı¾İËùĞèÒªµÄ°ü
+//å¯¼å‡ºæ•°æ®æ‰€éœ€è¦çš„åŒ…
 import java.io.File;
 import java.io.IOException;
 
@@ -28,7 +28,7 @@ import org.apache.commons.logging.LogFactory;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
-//ÒÔÉÏÎªµ¼³öÊı¾İËùĞèÒªµÄ°ü
+//ä»¥ä¸Šä¸ºå¯¼å‡ºæ•°æ®æ‰€éœ€è¦çš„åŒ…
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -61,13 +61,13 @@ public class UserBean extends HibernateBase {
 	
 	private static Log log = LogFactory.getLog(UserBean.class);
 
-	// ¸ù¾İmail name workplace È·ÈÏÊÇ·ñÓĞÕâ¸öÈË
+	// æ ¹æ®mail name workplace ç¡®è®¤æ˜¯å¦æœ‰è¿™ä¸ªäºº
 	public String checkInfo(String mail, String name, String workplace)
 			throws HibernateException {
 		try {
 			if(!(workplace.equals("123456")))
 				return ParseToReponse.parse("3", "no such info", null,
-						0); // ÈÏÖ¤²»Í¨¹ı
+						0); // è®¤è¯ä¸é€šè¿‡
 			System.out.println(name + "name" + workplace);
 			String queryString = "from InitialExpertInfo where mail=? and mail<>? and name=? and name<>? ";
 			beginTransaction();
@@ -82,15 +82,15 @@ public class UserBean extends HibernateBase {
 			List<InitialExpertInfo> infos = query.list();
 			if (infos.size() == 0) {
 				return ParseToReponse.parse("3", "no such info", infos,
-						infos.size()); // ÈÏÖ¤²»Í¨¹ı
+						infos.size()); // è®¤è¯ä¸é€šè¿‡
 			} else {
 				if (1==infos.get(0).getIsUsed()) {
 					return ParseToReponse.parse("2", "the info has used",
-							infos, infos.size()); // Ò»¸öĞÅÏ¢²»ÄÜ×¢²áÁ½´Î
+							infos, infos.size()); // ä¸€ä¸ªä¿¡æ¯ä¸èƒ½æ³¨å†Œä¸¤æ¬¡
 				} else {
 					System.out.println("return" + infos.get(0).getName());
 					return ParseToReponse.parse("1", "correct", infos,
-							infos.size()); // ÈÏÖ¤Í¨¹ı
+							infos.size()); // è®¤è¯é€šè¿‡
 				}
 			}
 		} catch (Exception e) {
@@ -133,7 +133,7 @@ public class UserBean extends HibernateBase {
 
 			int userId = Integer.valueOf(s.toString());
 
-			String queryString = "from InitialExpertInfo where id=?"; // ÕâÀï
+			String queryString = "from InitialExpertInfo where id=?"; // è¿™é‡Œ
 			beginTransaction();
 			Query query = session.createQuery(queryString);
 			query.setParameter(0, infoId);
@@ -498,7 +498,7 @@ public class UserBean extends HibernateBase {
 	
 	public String initremark(int userId,int version) throws HibernateException {
 		try {
-			//»ñÈ¡ËùÓĞµÄ¶ş¼¶Ö¸±ê
+			//è·å–æ‰€æœ‰çš„äºŒçº§æŒ‡æ ‡
             List<SecondLevel> SecondLevels = getAllSecondLevel();
             beginTransaction();
             for(int i=0; i < SecondLevels.size(); i++){
@@ -621,7 +621,7 @@ public class UserBean extends HibernateBase {
 //		try {
 //
 //			 String[] ss = new
-//			 String[]{"ĞÂ·¢Í»·¢´«È¾²¡,ÊóÒß,»ôÂÒ,´«È¾ĞÔ·ÇµäĞÍ·Î,°¬×Ì²¡,²¡¶¾ĞÔ¸ÎÑ×,¼¹Ëè»ÒÖÊÑ×,ÈË¸ĞÈ¾ÖÂ²¡ĞÔÇİÁ÷¸Ğ,¼×ĞÍH1N1Á÷¸Ğ,ÂéÕî,Á÷ĞĞĞÔ³öÑ©ÈÈ,¿ñÈ®²¡,Á÷ĞĞĞÔÒÒĞÍÄÔÑ×,µÇ¸ïÈÈ,Ì¼¾Ò,Ï¸¾úĞÔºÍ°¢Ã×°ÍĞÔÁ¡¼²,·Î½áºË,ÉËº®ºÍ¸±ÉËº®,Á÷ĞĞĞÔÄÔ¼¹ËèÄ¤,°ÙÈÕ¿È,°×ºí,ĞÂÉúÆÆÉË·ç,ĞÉºìÈÈ,²¼Â³ÊÏ¾ú²¡,ÁÜ²¡,¹³¶ËÂİĞıÌå²¡,ÑªÎü³æ²¡,Å±¼²,Á÷ĞĞĞÔ¸ĞÃ°£¨¼ò³ÆÁ÷¸Ğ£©,Á÷ĞĞĞÔÈùÏÙÑ×,·çÕî,¼±ĞÔ³öÑªĞÔ½áÄ¤Ñ×,Âé·ç²¡,Á÷ĞĞĞÔºÍµØ·½ĞÔ°ßÕïÉËº®,ºÚÈÈ²¡,°ü³æ²¡,Ë¿³æ²¡³ı»ôÂÒ,Ï¸¾úĞÔºÍ°¢Ã×°ÍĞÔÁ¡¼²,ÉËº®ºÍ¸±ÉËº®ÒÔÍâµÄ¸ĞÈ¾ĞÔ¸¹Ğº²¡,ÊÖ×ã¿Ú²¡","·Î°©,¸Î°©,Î¸°©,½áÖ±³¦°©,ÈéÏÙ°©,¹¬¾±°©,Ê³¹Ü°©,Ç°ÁĞÏÙ°©,ÒÈÏÙ°©,°×Ñª²¡,µ¨ÄÒ°©,¸ßÑªÑ¹,ÑªÖ¬Òì³£,¹ÚĞÄ²¡/ĞÄ¼¡¹£ËÀ,ÌÇÄò²¡,ÄÔ×äÖĞ,ÂıĞÔ×èÈûĞÔ·Î²¡,Ïø´­,ÀÏÄê³Õ´ô,ÂıĞÔÉö²¡,ÀÏÄêÊ§ÄÜ,³¬ÖØ·ÊÅÖ,³£¼û¿ÚÇ»¼²²¡","ÒÖÓôÖ¢,Ë«ÏàÇé¸ĞÕÏ°­,¾«Éñ·ÖÁÑÖ¢,½¹ÂÇÖ¢,Ò©ÎïÀÄÓÃÓëÒ©ÎïÒÀÀµ,ÖÇÁ¦ÕÏ°­,¶ùÍ¯ÆÚºÍÇà´ºÆÚ·¢ÓıºÍĞĞÎªÕÏ°­ Èç×Ô±ÕÖ¢,ñ²ğï","ÎüÑÌ,¹ıÁ¿Òû¾Æ,ÉíÌå»î¶¯²»×ã,²»½¡¿µÒûÊ³£¨¸ßÑÎ¡¢¸ßÖ¬¡¢ÉÙÊß²ËË®¹ûµÈ£©,²»°²È«ĞÔĞĞÎª","ÈÑÉï¸ßÑªÑ¹,ÈÑÉïÌÇÄò²¡,²úºó³öÑª,×Óğï,ÏÈÌìĞÔĞÄÔà²¡,³öÉúµÍÌåÖØ,¶ùÍ¯±½±ûÍªÄòÖ¢,ĞÂÉú¶ùÖÏÏ¢¡¢·ÎÑ×","µÀÂ·½»Í¨ÉËº¦,×ÔÉ±,ÄçË®,µøµ¹,¼ÒÍ¥±©Á¦","Ê³ÎïÖĞ¶¾,·Ç·¨Ê¹ÓÃÊ³Æ·Ìí¼Ó¼Á,Å©Ò©¡¢¼¤ËØ¼°¿¹ÉúËØµÈ²ĞÁô,ÓªÑø²»Á¼","³¾·Î,ÔëÉùĞÔÌıÁ¦ÏÂ½µ»ò¶úÁû,¼×È©¡¢±½ºÍÆäËûÓĞ»úÈÜ¼ÁÖĞ¶¾,Í»·¢Ö°ÒµÖĞ¶¾,Ö°Òµ½ôÕÅ,¼¡Èâ¹Ç÷ÀËğÉË£¨ÀıÈç¾±×µ²¡¡¢Ñü×µ²¡¡¢¼çÍó×ÛºÏÕ÷µÈ£©,ÖØ´ó»·¾³ÎÛÈ¾ÊÂ¹Ê,Ë®ÎÛÈ¾,ÍÁÈÀÎÛÈ¾,¿ÕÆøÎÛÈ¾,ÊÒÄÚ»·¾³ÎÛÈ¾,ĞÂ¼¼Êõ¡¢ĞÂ²ÄÁÏ´øÀ´µÄ»·¾³ÎÛÈ¾","µâÈ±·¦²¡,´ó¹Ç½Ú²¡"};
+//			 String[]{"æ–°å‘çªå‘ä¼ æŸ“ç—…,é¼ ç–«,éœä¹±,ä¼ æŸ“æ€§éå…¸å‹è‚º,è‰¾æ»‹ç—…,ç—…æ¯’æ€§è‚ç‚,è„Šé«“ç°è´¨ç‚,äººæ„ŸæŸ“è‡´ç—…æ€§ç¦½æµæ„Ÿ,ç”²å‹H1N1æµæ„Ÿ,éº»ç–¹,æµè¡Œæ€§å‡ºé›ªçƒ­,ç‹‚çŠ¬ç—…,æµè¡Œæ€§ä¹™å‹è„‘ç‚,ç™»é©çƒ­,ç¢³ç–½,ç»†èŒæ€§å’Œé˜¿ç±³å·´æ€§ç—¢ç–¾,è‚ºç»“æ ¸,ä¼¤å¯’å’Œå‰¯ä¼¤å¯’,æµè¡Œæ€§è„‘è„Šé«“è†œ,ç™¾æ—¥å’³,ç™½å–‰,æ–°ç”Ÿç ´ä¼¤é£,çŒ©çº¢çƒ­,å¸ƒé²æ°èŒç—…,æ·‹ç—…,é’©ç«¯èºæ—‹ä½“ç—…,è¡€å¸è™«ç—…,ç–Ÿç–¾,æµè¡Œæ€§æ„Ÿå†’ï¼ˆç®€ç§°æµæ„Ÿï¼‰,æµè¡Œæ€§è…®è…ºç‚,é£ç–¹,æ€¥æ€§å‡ºè¡€æ€§ç»“è†œç‚,éº»é£ç—…,æµè¡Œæ€§å’Œåœ°æ–¹æ€§æ–‘è¯Šä¼¤å¯’,é»‘çƒ­ç—…,åŒ…è™«ç—…,ä¸è™«ç—…é™¤éœä¹±,ç»†èŒæ€§å’Œé˜¿ç±³å·´æ€§ç—¢ç–¾,ä¼¤å¯’å’Œå‰¯ä¼¤å¯’ä»¥å¤–çš„æ„ŸæŸ“æ€§è…¹æ³»ç—…,æ‰‹è¶³å£ç—…","è‚ºç™Œ,è‚ç™Œ,èƒƒç™Œ,ç»“ç›´è‚ ç™Œ,ä¹³è…ºç™Œ,å®«é¢ˆç™Œ,é£Ÿç®¡ç™Œ,å‰åˆ—è…ºç™Œ,èƒ°è…ºç™Œ,ç™½è¡€ç—…,èƒ†å›Šç™Œ,é«˜è¡€å‹,è¡€è„‚å¼‚å¸¸,å† å¿ƒç—…/å¿ƒè‚Œæ¢—æ­»,ç³–å°¿ç—…,è„‘å’ä¸­,æ…¢æ€§é˜»å¡æ€§è‚ºç—…,å“®å–˜,è€å¹´ç—´å‘†,æ…¢æ€§è‚¾ç—…,è€å¹´å¤±èƒ½,è¶…é‡è‚¥èƒ–,å¸¸è§å£è…”ç–¾ç—…","æŠ‘éƒç—‡,åŒç›¸æƒ…æ„Ÿéšœç¢,ç²¾ç¥åˆ†è£‚ç—‡,ç„¦è™‘ç—‡,è¯ç‰©æ»¥ç”¨ä¸è¯ç‰©ä¾èµ–,æ™ºåŠ›éšœç¢,å„¿ç«¥æœŸå’Œé’æ˜¥æœŸå‘è‚²å’Œè¡Œä¸ºéšœç¢ å¦‚è‡ªé—­ç—‡,ç™«ç—«","å¸çƒŸ,è¿‡é‡é¥®é…’,èº«ä½“æ´»åŠ¨ä¸è¶³,ä¸å¥åº·é¥®é£Ÿï¼ˆé«˜ç›ã€é«˜è„‚ã€å°‘è”¬èœæ°´æœç­‰ï¼‰,ä¸å®‰å…¨æ€§è¡Œä¸º","å¦Šå¨ é«˜è¡€å‹,å¦Šå¨ ç³–å°¿ç—…,äº§åå‡ºè¡€,å­ç—«,å…ˆå¤©æ€§å¿ƒè„ç—…,å‡ºç”Ÿä½ä½“é‡,å„¿ç«¥è‹¯ä¸™é…®å°¿ç—‡,æ–°ç”Ÿå„¿çª’æ¯ã€è‚ºç‚","é“è·¯äº¤é€šä¼¤å®³,è‡ªæ€,æººæ°´,è·Œå€’,å®¶åº­æš´åŠ›","é£Ÿç‰©ä¸­æ¯’,éæ³•ä½¿ç”¨é£Ÿå“æ·»åŠ å‰‚,å†œè¯ã€æ¿€ç´ åŠæŠ—ç”Ÿç´ ç­‰æ®‹ç•™,è¥å…»ä¸è‰¯","å°˜è‚º,å™ªå£°æ€§å¬åŠ›ä¸‹é™æˆ–è€³è‹,ç”²é†›ã€è‹¯å’Œå…¶ä»–æœ‰æœºæº¶å‰‚ä¸­æ¯’,çªå‘èŒä¸šä¸­æ¯’,èŒä¸šç´§å¼ ,è‚Œè‚‰éª¨éª¼æŸä¼¤ï¼ˆä¾‹å¦‚é¢ˆæ¤ç—…ã€è…°æ¤ç—…ã€è‚©è…•ç»¼åˆå¾ç­‰ï¼‰,é‡å¤§ç¯å¢ƒæ±¡æŸ“äº‹æ•…,æ°´æ±¡æŸ“,åœŸå£¤æ±¡æŸ“,ç©ºæ°”æ±¡æŸ“,å®¤å†…ç¯å¢ƒæ±¡æŸ“,æ–°æŠ€æœ¯ã€æ–°ææ–™å¸¦æ¥çš„ç¯å¢ƒæ±¡æŸ“","ç¢˜ç¼ºä¹ç—…,å¤§éª¨èŠ‚ç—…"};
 //			 for (int i = 0; i < ss.length; i++) {
 //			 String subString=ss[i];
 //			 String[] allsStrings =subString.split(",");
@@ -823,7 +823,7 @@ public class UserBean extends HibernateBase {
 	}
 	
 	
-	//Îªµ¼³öÊı¾İ×ö×¼±¸£¬»ñÈ¡secondlevelµÄÃû×Ö¡£
+	//ä¸ºå¯¼å‡ºæ•°æ®åšå‡†å¤‡ï¼Œè·å–secondlevelçš„åå­—ã€‚
 	public List<SecondLevel> getSecondIllName(int id) throws HibernateException{
 		try {
 			
@@ -843,7 +843,7 @@ public class UserBean extends HibernateBase {
 		}
 	}
 	
-	//Îªµ¼³öÊı¾İ×ö×¼±¸£¬»ñÈ¡ËùÓĞexport¡£
+	//ä¸ºå¯¼å‡ºæ•°æ®åšå‡†å¤‡ï¼Œè·å–æ‰€æœ‰exportã€‚
 	public List<ExpertInfo> getExpertInfoName() throws HibernateException{
 		try {
 			
@@ -862,7 +862,7 @@ public class UserBean extends HibernateBase {
 		}
 	}
 	
-	//Îªµ¼³öÊı¾İ×ö×¼±¸£¬»ñÈ¡¶ş¼¶Ö¸±êµÄÎÊ¾íÌîĞ´ĞÅÏ¢
+	//ä¸ºå¯¼å‡ºæ•°æ®åšå‡†å¤‡ï¼Œè·å–äºŒçº§æŒ‡æ ‡çš„é—®å·å¡«å†™ä¿¡æ¯
 	public List<Remark> getExpertRemark(int userId) throws HibernateException{
 		try {
 			
@@ -901,7 +901,7 @@ public class UserBean extends HibernateBase {
 		}
 	}
 	
-	//µ¼³ö×¨¼ÒÒøĞĞĞÅÏ¢
+	//å¯¼å‡ºä¸“å®¶é“¶è¡Œä¿¡æ¯
 	public List<ExpertBankInfo> getexportbankInfo(int id) throws HibernateException {
 		try {
 			String queryString = "from ExpertBankInfo where userId = ?";
@@ -943,13 +943,13 @@ public class UserBean extends HibernateBase {
 	
 	
 	
-	//µ¼³ö×¨¼ÒÎÊ¾íÊı¾İ
+	//å¯¼å‡ºä¸“å®¶é—®å·æ•°æ®
 	public String exportData(int type,HttpServletRequest request) throws HibernateException {
 		try {
 			List<ExpertInfo> list = getExpertInfoName();
 			List<SecondLevel> list2 = getsecondLevels();
 			List<Top20> list3 = getTop20s();
-			//µ¼³ö°æ±¾Ò»µ÷²éµÄÎÊ¾íĞÅÏ¢
+			//å¯¼å‡ºç‰ˆæœ¬ä¸€è°ƒæŸ¥çš„é—®å·ä¿¡æ¯
 			if(type == 1){
 				
 				boolean res = Remark_DB2Excel( list, request,1);
@@ -959,7 +959,7 @@ public class UserBean extends HibernateBase {
 				}else{
 					return ParseToReponse.parse("4", "exportRemarkDataerror", null, 0);
 				}
-			}else if(type == 2){//µ¼³ö²ÆÎñĞÅÏ¢
+			}else if(type == 2){//å¯¼å‡ºè´¢åŠ¡ä¿¡æ¯
 				boolean res = Financial_DB2Excel( list, request);
 				if(res == true){
 					return ParseToReponse.parse("1", "exportfinancialDatasuccess",
@@ -967,7 +967,7 @@ public class UserBean extends HibernateBase {
 				}else{
 					return ParseToReponse.parse("4", "exportfinancialDataerror", null, 0);
 				}
-			}else if(type == 3){//µ¼³ö¸öÈËĞÅÏ¢
+			}else if(type == 3){//å¯¼å‡ºä¸ªäººä¿¡æ¯
 				boolean res = Info_DB2Excel( list,request);
 				if(res == true){
 					return ParseToReponse.parse("1", "exportinfoDatasuccess",
@@ -975,7 +975,7 @@ public class UserBean extends HibernateBase {
 				}else{
 					return ParseToReponse.parse("4", "exportinfoDataerror", null, 0);
 				}
-			}else if(type == 4){//µ¼³ö°æ±¾¶şµ÷²éµÄÎÊ¾íĞÅÏ¢
+			}else if(type == 4){//å¯¼å‡ºç‰ˆæœ¬äºŒè°ƒæŸ¥çš„é—®å·ä¿¡æ¯
 				boolean res = Remark_DB2Excel( list, request,2);
 				if(res == true){
 					return ParseToReponse.parse("1", "exportRemarkDatasuccess",
@@ -983,7 +983,7 @@ public class UserBean extends HibernateBase {
 				}else{
 					return ParseToReponse.parse("4", "exportRemarkDataerror", null, 0);
 				}
-			}else if(type == 5){//µ¼³ö°æ±¾Ò»µÄ¶ş¼¶¼²²¡ĞÅÏ¢
+			}else if(type == 5){//å¯¼å‡ºç‰ˆæœ¬ä¸€çš„äºŒçº§ç–¾ç—…ä¿¡æ¯
 				boolean res = Ill_DB2Excel( list2,request);
 				if(res == true){
 					return ParseToReponse.parse("1", "exportRemarkDatasuccess",
@@ -1038,31 +1038,31 @@ public class UserBean extends HibernateBase {
         WritableSheet sheet = null;
         Label label = null;
 
-        // ´´½¨Excel±í
+        // åˆ›å»ºExcelè¡¨
         try {
         	 WritableWorkbook wwb = null;
              
-               // ´´½¨¿ÉĞ´ÈëµÄExcel¹¤×÷²¾
+               // åˆ›å»ºå¯å†™å…¥çš„Excelå·¥ä½œç°¿
         	   String fileName = request.getRealPath("/download/"+ "top_20.xls") ;
                File file=new File(fileName);
               
                if (!file.exists()) {
                    file.createNewFile();
                }
-               //ÒÔfileNameÎªÎÄ¼şÃûÀ´´´½¨Ò»¸öWorkbook
+               //ä»¥fileNameä¸ºæ–‡ä»¶åæ¥åˆ›å»ºä¸€ä¸ªWorkbook
                wwb = Workbook.createWorkbook(file);
                
                
-               // ´´½¨¹¤×÷±í
-               WritableSheet ws = wwb.createSheet("Top20¼²²¡", 0);
+               // åˆ›å»ºå·¥ä½œè¡¨
+               WritableSheet ws = wwb.createSheet("Top20ç–¾ç—…", 0);
                
                
                
                
-               //²éÑ¯Êı¾İ¿âÖĞËùÓĞµÄÊı¾İ
+               //æŸ¥è¯¢æ•°æ®åº“ä¸­æ‰€æœ‰çš„æ•°æ®
                //List<StuEntity> list= StuService.getAllByDb();
-               //Òª²åÈëµ½µÄExcel±í¸ñµÄĞĞºÅ£¬Ä¬ÈÏ´Ó0¿ªÊ¼
-               Label labelIdLabel = new Label(0,0,"Top20¼²²¡ID");
+               //è¦æ’å…¥åˆ°çš„Excelè¡¨æ ¼çš„è¡Œå·ï¼Œé»˜è®¤ä»0å¼€å§‹
+               Label labelIdLabel = new Label(0,0,"Top20ç–¾ç—…ID");
                
                
                ws.addCell(labelIdLabel);
@@ -1072,10 +1072,10 @@ public class UserBean extends HibernateBase {
                Label[] labarr = new Label[90];
                
                for(int i=0; i<=20; i++){
-            	   labarr[1+i*4]= new Label(1+i*4, 0, "¶ş¼¶Ö¸±ê("+i+")");
-            	   labarr[2+i*4]= new Label(2+i*4, 0, "ÊìÏ¤³Ì¶È");
-            	   labarr[3+i*4]= new Label(3+i*4, 0, "ÖØÒª³Ì¶È");
-            	   labarr[4+i*4]= new Label(4+i*4, 0, "¿É¿ØĞÔ");
+            	   labarr[1+i*4]= new Label(1+i*4, 0, "äºŒçº§æŒ‡æ ‡("+i+")");
+            	   labarr[2+i*4]= new Label(2+i*4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+            	   labarr[3+i*4]= new Label(3+i*4, 0, "é‡è¦ç¨‹åº¦");
+            	   labarr[4+i*4]= new Label(4+i*4, 0, "å¯æ§æ€§");
 	               ws.addCell(labarr[1+i*4]);
 	               ws.addCell(labarr[2+i*4]);
 	               ws.addCell(labarr[3+i*4]);
@@ -1096,9 +1096,9 @@ public class UserBean extends HibernateBase {
 		             
                }
              
-              //Ğ´½øÎÄµµ
+              //å†™è¿›æ–‡æ¡£
                wwb.write();
-              // ¹Ø±ÕExcel¹¤×÷²¾¶ÔÏó
+              // å…³é—­Excelå·¥ä½œç°¿å¯¹è±¡
                wwb.close();
 
 
@@ -1118,39 +1118,39 @@ public class UserBean extends HibernateBase {
         WritableSheet sheet = null;
         Label label = null;
 
-        // ´´½¨Excel±í
+        // åˆ›å»ºExcelè¡¨
         try {
         	 WritableWorkbook wwb = null;
              
-               // ´´½¨¿ÉĞ´ÈëµÄExcel¹¤×÷²¾
+               // åˆ›å»ºå¯å†™å…¥çš„Excelå·¥ä½œç°¿
         	   String fileName = request.getRealPath("/download/"+ "ill_data.xls") ;
                File file=new File(fileName);
               
                if (!file.exists()) {
                    file.createNewFile();
                }
-               //ÒÔfileNameÎªÎÄ¼şÃûÀ´´´½¨Ò»¸öWorkbook
+               //ä»¥fileNameä¸ºæ–‡ä»¶åæ¥åˆ›å»ºä¸€ä¸ªWorkbook
                wwb = Workbook.createWorkbook(file);
                
                
-               // ´´½¨¹¤×÷±í
-               WritableSheet ws = wwb.createSheet("¼²²¡", 0);
+               // åˆ›å»ºå·¥ä½œè¡¨
+               WritableSheet ws = wwb.createSheet("ç–¾ç—…", 0);
                
                
                
                
-               //²éÑ¯Êı¾İ¿âÖĞËùÓĞµÄÊı¾İ
+               //æŸ¥è¯¢æ•°æ®åº“ä¸­æ‰€æœ‰çš„æ•°æ®
                //List<StuEntity> list= StuService.getAllByDb();
-               //Òª²åÈëµ½µÄExcel±í¸ñµÄĞĞºÅ£¬Ä¬ÈÏ´Ó0¿ªÊ¼
+               //è¦æ’å…¥åˆ°çš„Excelè¡¨æ ¼çš„è¡Œå·ï¼Œé»˜è®¤ä»0å¼€å§‹
                Label labelIdLabel = new Label(0,0,"ID");
-               Label labelIllName= new Label(1, 0, "¼²²¡Ãû×Ö");//±íÊ¾µÚ
-               Label label_All_familiar_Average = new Label(2, 0, "È«Ìå×¨¼ÒÊìÏ¤³Ì¶È¾ù·Ö");
-               Label label_Area_familar_Average = new Label(3, 0, "ÁìÓò×¨¼ÒÊìÏ¤³Ì¶È¾ù·Ö");
-               Label label_All_import_Average = new Label(4, 0, "È«Ìå×¨¼ÒÖØÒª³Ì¶È¾ù·Ö");
-               Label label_Area_import_Average = new Label(5, 0, "ÁìÓò×¨¼ÒÖØÒª³Ì¶È¾ù·Ö");
-               Label label_All_control_Average = new Label(6, 0, "È«Ìå×¨¼Ò¿É¿Ø³Ì¶È¾ù·Ö");
-               Label label_Area_control_Average = new Label(7, 0, "ÁìÓò×¨¼Ò¿É¿Ø³Ì¶È¾ù·Ö");
-               Label label_Percent = new Label(8, 0, "×¨¼ÒÑ¡Ôñ°Ù·Ö±È");
+               Label labelIllName= new Label(1, 0, "ç–¾ç—…åå­—");//è¡¨ç¤ºç¬¬
+               Label label_All_familiar_Average = new Label(2, 0, "å…¨ä½“ä¸“å®¶ç†Ÿæ‚‰ç¨‹åº¦å‡åˆ†");
+               Label label_Area_familar_Average = new Label(3, 0, "é¢†åŸŸä¸“å®¶ç†Ÿæ‚‰ç¨‹åº¦å‡åˆ†");
+               Label label_All_import_Average = new Label(4, 0, "å…¨ä½“ä¸“å®¶é‡è¦ç¨‹åº¦å‡åˆ†");
+               Label label_Area_import_Average = new Label(5, 0, "é¢†åŸŸä¸“å®¶é‡è¦ç¨‹åº¦å‡åˆ†");
+               Label label_All_control_Average = new Label(6, 0, "å…¨ä½“ä¸“å®¶å¯æ§ç¨‹åº¦å‡åˆ†");
+               Label label_Area_control_Average = new Label(7, 0, "é¢†åŸŸä¸“å®¶å¯æ§ç¨‹åº¦å‡åˆ†");
+               Label label_Percent = new Label(8, 0, "ä¸“å®¶é€‰æ‹©ç™¾åˆ†æ¯”");
                
                ws.addCell(labelIdLabel);
                ws.addCell(labelIllName);
@@ -1166,10 +1166,10 @@ public class UserBean extends HibernateBase {
                Label[] labarr = new Label[90];
                
                for(int i=0; i<=20; i++){
-            	   labarr[1+i*4]= new Label(1+i*4, 0, "¶ş¼¶Ö¸±ê("+i+")");
-            	   labarr[2+i*4]= new Label(2+i*4, 0, "ÊìÏ¤³Ì¶È");
-            	   labarr[3+i*4]= new Label(3+i*4, 0, "ÖØÒª³Ì¶È");
-            	   labarr[4+i*4]= new Label(4+i*4, 0, "¿É¿ØĞÔ");
+            	   labarr[1+i*4]= new Label(1+i*4, 0, "äºŒçº§æŒ‡æ ‡("+i+")");
+            	   labarr[2+i*4]= new Label(2+i*4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+            	   labarr[3+i*4]= new Label(3+i*4, 0, "é‡è¦ç¨‹åº¦");
+            	   labarr[4+i*4]= new Label(4+i*4, 0, "å¯æ§æ€§");
 	               ws.addCell(labarr[1+i*4]);
 	               ws.addCell(labarr[2+i*4]);
 	               ws.addCell(labarr[3+i*4]);
@@ -1214,9 +1214,9 @@ public class UserBean extends HibernateBase {
 		             
                }
              
-              //Ğ´½øÎÄµµ
+              //å†™è¿›æ–‡æ¡£
                wwb.write();
-              // ¹Ø±ÕExcel¹¤×÷²¾¶ÔÏó
+              // å…³é—­Excelå·¥ä½œç°¿å¯¹è±¡
                wwb.close();
 
 
@@ -1231,7 +1231,7 @@ public class UserBean extends HibernateBase {
     }
 	
 	
-	//»ñÈ¡ËùÓĞÔ­Ê¼µÄ¶ş¼¶Ö¸±ê
+	//è·å–æ‰€æœ‰åŸå§‹çš„äºŒçº§æŒ‡æ ‡
 	public List<SecondLevel> getAllSecondLevel() throws HibernateException {
 		try {
 			String queryString = "from SecondLevel where firstLevelId > 0";
@@ -1250,44 +1250,44 @@ public class UserBean extends HibernateBase {
 	
 	
 	
-	//µ¼³öÊı¾İµ½excel
+	//å¯¼å‡ºæ•°æ®åˆ°excel
 	 public boolean Remark_DB2Excel(List<ExpertInfo> list, HttpServletRequest request,int version) {
 	        boolean flag = false;
 	        WritableWorkbook workbook = null;
 	        WritableSheet sheet = null;
 	        Label label = null;
 
-	        // ´´½¨Excel±í
+	        // åˆ›å»ºExcelè¡¨
 	        try {
 	        	 WritableWorkbook wwb = null;
 	             
-	               // ´´½¨¿ÉĞ´ÈëµÄExcel¹¤×÷²¾
+	               // åˆ›å»ºå¯å†™å…¥çš„Excelå·¥ä½œç°¿
 	        	 
 	               String fileName = request.getRealPath("/download/"+ "expert_research_data_"+version+".xls") ;
 	               File file=new File(fileName);
 	               if (!file.exists()) {
 	                   file.createNewFile();
 	               }
-	               //ÒÔfileNameÎªÎÄ¼şÃûÀ´´´½¨Ò»¸öWorkbook
+	               //ä»¥fileNameä¸ºæ–‡ä»¶åæ¥åˆ›å»ºä¸€ä¸ªWorkbook
 	               wwb = Workbook.createWorkbook(file);
 	               
 	               
-	               // ´´½¨¹¤×÷±í
-	               WritableSheet ws = wwb.createSheet("¼²²¡¿É·À¿ØĞÔ", 0);
+	               // åˆ›å»ºå·¥ä½œè¡¨
+	               WritableSheet ws = wwb.createSheet("ç–¾ç—…å¯é˜²æ§æ€§", 0);
 	               
 	               
 	               
 	               
-	               //²éÑ¯Êı¾İ¿âÖĞËùÓĞµÄÊı¾İ
+	               //æŸ¥è¯¢æ•°æ®åº“ä¸­æ‰€æœ‰çš„æ•°æ®
 	               //List<StuEntity> list= StuService.getAllByDb();
-	               //Òª²åÈëµ½µÄExcel±í¸ñµÄĞĞºÅ£¬Ä¬ÈÏ´Ó0¿ªÊ¼
-	               Label labelUserId= new Label(0, 0, "ÓÃ»§Ãû");//±íÊ¾µÚ\
-	               Label labelillname1 = new Label(1, 0, "Ò»¼¶Ö¸±ê");
-	               Label labelillname = new Label(2, 0, "¶ş¼¶Ö¸±ê");
-	               Label labelchoosed = new Label(3, 0, "ÊÇ·ñÑ¡ÖĞ£¨1=Ñ¡ÖĞ£»0=Î´Ñ¡ÖĞ£©");
-	               Label labelfamiliar = new Label(4, 0, "ÊìÏ¤³Ì¶È");
-	               Label labelimportance = new Label(5, 0, "ÖØÒª³Ì¶È");
-	               Label labelcontrol = new Label(6, 0, "¿É·À¿Ø³Ì¶È");
+	               //è¦æ’å…¥åˆ°çš„Excelè¡¨æ ¼çš„è¡Œå·ï¼Œé»˜è®¤ä»0å¼€å§‹
+	               Label labelUserId= new Label(0, 0, "ç”¨æˆ·å");//è¡¨ç¤ºç¬¬\
+	               Label labelillname1 = new Label(1, 0, "ä¸€çº§æŒ‡æ ‡");
+	               Label labelillname = new Label(2, 0, "äºŒçº§æŒ‡æ ‡");
+	               Label labelchoosed = new Label(3, 0, "æ˜¯å¦é€‰ä¸­ï¼ˆ1=é€‰ä¸­ï¼›0=æœªé€‰ä¸­ï¼‰");
+	               Label labelfamiliar = new Label(4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+	               Label labelimportance = new Label(5, 0, "é‡è¦ç¨‹åº¦");
+	               Label labelcontrol = new Label(6, 0, "å¯é˜²æ§ç¨‹åº¦");
 	               ws.addCell(labelUserId);
 	               ws.addCell(labelillname1);
 	               ws.addCell(labelillname);
@@ -1300,10 +1300,10 @@ public class UserBean extends HibernateBase {
 	               Label[] labarr = new Label[90];
 	               
 	               for(int i=0; i<=20; i++){
-	            	   labarr[1+i*4]= new Label(1+i*4, 0, "¶ş¼¶Ö¸±ê("+i+")");
-	            	   labarr[2+i*4]= new Label(2+i*4, 0, "ÊìÏ¤³Ì¶È");
-	            	   labarr[3+i*4]= new Label(3+i*4, 0, "ÖØÒª³Ì¶È");
-	            	   labarr[4+i*4]= new Label(4+i*4, 0, "¿É¿ØĞÔ");
+	            	   labarr[1+i*4]= new Label(1+i*4, 0, "äºŒçº§æŒ‡æ ‡("+i+")");
+	            	   labarr[2+i*4]= new Label(2+i*4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+	            	   labarr[3+i*4]= new Label(3+i*4, 0, "é‡è¦ç¨‹åº¦");
+	            	   labarr[4+i*4]= new Label(4+i*4, 0, "å¯æ§æ€§");
 		               ws.addCell(labarr[1+i*4]);
 		               ws.addCell(labarr[2+i*4]);
 		               ws.addCell(labarr[3+i*4]);
@@ -1342,7 +1342,7 @@ public class UserBean extends HibernateBase {
 	            	   if(version==1){
 	            		   List<Remark> remark = getExpertRemark(expertId);
 		                   for (int j=0; j < remark.size(); j++){
-		                	   Label labelUser_i= new Label(0, lineNumber, expertName+"");//±íÊ¾µÚ
+		                	   Label labelUser_i= new Label(0, lineNumber, expertName+"");//è¡¨ç¤ºç¬¬
 		                	   Label labelillname_i1 = new Label(1, lineNumber, remark.get(j).getFirstLevelId()+"");
 		    	               Label labelillname_i = new Label(2, lineNumber, remark.get(j).getSickname()+"");
 		    	               Label labelchoosed_i = new Label(3, lineNumber, remark.get(j).getSelected()+"");
@@ -1361,7 +1361,7 @@ public class UserBean extends HibernateBase {
 	            	   }else {
 	            		   List<Remark2> remark = getExpertRemark2(expertId);
 		                   for (int j=0; j < remark.size(); j++){
-		                	   Label labelUser_i= new Label(0, lineNumber, expertName+"");//±íÊ¾µÚ
+		                	   Label labelUser_i= new Label(0, lineNumber, expertName+"");//è¡¨ç¤ºç¬¬
 		                	   Label labelillname_i1 = new Label(1, lineNumber, remark.get(j).getFirstLevelId()+"");
 		                	   Label labelillname_i = new Label(2, lineNumber, remark.get(j).getSickname()+"");
 		    	               Label labelchoosed_i = new Label(3, lineNumber, remark.get(j).getSelected()+"");
@@ -1382,9 +1382,9 @@ public class UserBean extends HibernateBase {
 	                   
 	               }
 	             
-	              //Ğ´½øÎÄµµ
+	              //å†™è¿›æ–‡æ¡£
 	               wwb.write();
-	              // ¹Ø±ÕExcel¹¤×÷²¾¶ÔÏó
+	              // å…³é—­Excelå·¥ä½œç°¿å¯¹è±¡
 	               wwb.close();
 
 
@@ -1398,73 +1398,73 @@ public class UserBean extends HibernateBase {
 	        return flag;
 	    }
 	 
-	//µ¼³öÊı¾İµ½excel info
+	//å¯¼å‡ºæ•°æ®åˆ°excel info
 		 public boolean Info_DB2Excel(List<ExpertInfo> list, HttpServletRequest request) {
 		        boolean flag = false;
 		        WritableWorkbook workbook = null;
 		        WritableSheet sheet = null;
 		        Label label = null;
 		        
-		        // ´´½¨Excel±í
+		        // åˆ›å»ºExcelè¡¨
 		        try {
 		        	 WritableWorkbook wwb = null;
 		             
-		               // ´´½¨¿ÉĞ´ÈëµÄExcel¹¤×÷²¾
+		               // åˆ›å»ºå¯å†™å…¥çš„Excelå·¥ä½œç°¿
 		        	   String fileName = request.getRealPath("/download/"+ "expert_info_data.xls") ;
 		               File file=new File(fileName);
 		               
 		               if (!file.exists()) {
 		                   file.createNewFile();
 		               }
-		               //ÒÔfileNameÎªÎÄ¼şÃûÀ´´´½¨Ò»¸öWorkbook
+		               //ä»¥fileNameä¸ºæ–‡ä»¶åæ¥åˆ›å»ºä¸€ä¸ªWorkbook
 		               wwb = Workbook.createWorkbook(file);
 		               
 		               
-		               // ´´½¨¹¤×÷±í
-		               WritableSheet ws = wwb.createSheet("×¨¼Ò¸öÈËĞÅÏ¢", 0);
+		               // åˆ›å»ºå·¥ä½œè¡¨
+		               WritableSheet ws = wwb.createSheet("ä¸“å®¶ä¸ªäººä¿¡æ¯", 0);
 		               
 		               
 		               
 		               
-		               //²éÑ¯Êı¾İ¿âÖĞËùÓĞµÄÊı¾İ
+		               //æŸ¥è¯¢æ•°æ®åº“ä¸­æ‰€æœ‰çš„æ•°æ®
 		               //List<StuEntity> list= StuService.getAllByDb();
-		               //Òª²åÈëµ½µÄExcel±í¸ñµÄĞĞºÅ£¬Ä¬ÈÏ´Ó0¿ªÊ¼
-		               Label labelUserId= new Label(0, 0, "×¨¼ÒĞÕÃû");//±íÊ¾µÚ
-		               Label labelAge = new Label(1, 0, "ÄêÁä");
-		               Label labelEducation = new Label(2, 0, "Ñ§Àú");
-		               Label labelWorkPlace = new Label(3, 0, "¹¤×÷µ¥Î»");
-		               Label labelPostCode = new Label(4, 0, "ÓÊ±à");
-		               Label labelTechLevel = new Label(5, 0, "¼¼ÊõÖ°³Æ");
-		               Label labelTechWorkYears = new Label(6, 0, "ÈÎÖ°ÄêÊı");
-		               Label labelAdministrationDuty = new Label(7, 0, "ĞĞÕşÖ°Îñ");
-		               Label labelAdministrationWorkYears = new Label(8, 0, "ÈÎÖ°ÄêÊı");
-		               Label labelTelephone = new Label(9, 0, "ÁªÏµµç»°");
-		               Label labelMail = new Label(10, 0, "µç×ÓÓÊÏä");
+		               //è¦æ’å…¥åˆ°çš„Excelè¡¨æ ¼çš„è¡Œå·ï¼Œé»˜è®¤ä»0å¼€å§‹
+		               Label labelUserId= new Label(0, 0, "ä¸“å®¶å§“å");//è¡¨ç¤ºç¬¬
+		               Label labelAge = new Label(1, 0, "å¹´é¾„");
+		               Label labelEducation = new Label(2, 0, "å­¦å†");
+		               Label labelWorkPlace = new Label(3, 0, "å·¥ä½œå•ä½");
+		               Label labelPostCode = new Label(4, 0, "é‚®ç¼–");
+		               Label labelTechLevel = new Label(5, 0, "æŠ€æœ¯èŒç§°");
+		               Label labelTechWorkYears = new Label(6, 0, "ä»»èŒå¹´æ•°");
+		               Label labelAdministrationDuty = new Label(7, 0, "è¡Œæ”¿èŒåŠ¡");
+		               Label labelAdministrationWorkYears = new Label(8, 0, "ä»»èŒå¹´æ•°");
+		               Label labelTelephone = new Label(9, 0, "è”ç³»ç”µè¯");
+		               Label labelMail = new Label(10, 0, "ç”µå­é‚®ç®±");
 		               
-		               Label labelGoodAtArea1 = new Label(11, 0, "ÊÇ·ñ´ÓÊÂ¹«ÎÀÁìÓò£º1=ÊÇ£¬0=·ñ");
-		               Label labelArea1Major = new Label(12, 0, "¹«ÎÀ×¨Òµ");
-		               Label labelArea1Year = new Label(13, 0, "´ÓÊÂÄêÊı");
+		               Label labelGoodAtArea1 = new Label(11, 0, "æ˜¯å¦ä»äº‹å…¬å«é¢†åŸŸï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelArea1Major = new Label(12, 0, "å…¬å«ä¸“ä¸š");
+		               Label labelArea1Year = new Label(13, 0, "ä»äº‹å¹´æ•°");
 		               
-		               Label labelGoodAtArea2 = new Label(14, 0, "ÊÇ·ñ´ÓÊÂÁÙ´²Ò½ÁÆÁìÓò£º1=ÊÇ£¬0=·ñ");
-		               Label labelArea2Major = new Label(15, 0, "ÁÙ´²Ò½ÁÆ×¨Òµ");
-		               Label labelArea2Year = new Label(16, 0, "´ÓÊÂÄêÊı");
+		               Label labelGoodAtArea2 = new Label(14, 0, "æ˜¯å¦ä»äº‹ä¸´åºŠåŒ»ç–—é¢†åŸŸï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelArea2Major = new Label(15, 0, "ä¸´åºŠåŒ»ç–—ä¸“ä¸š");
+		               Label labelArea2Year = new Label(16, 0, "ä»äº‹å¹´æ•°");
 		               
-		               Label labelGoodAtArea3 = new Label(17, 0, "ÊÇ·ñ´ÓÊÂĞĞÕş¹ÜÀíÁìÓò£º1=ÊÇ£¬0=·ñ");
-		               Label labelArea3Major = new Label(18, 0, "ĞĞÕş¹ÜÀí×¨Òµ");
-		               Label labelArea3Year = new Label(19, 0, "´ÓÊÂÄêÊı");
+		               Label labelGoodAtArea3 = new Label(17, 0, "æ˜¯å¦ä»äº‹è¡Œæ”¿ç®¡ç†é¢†åŸŸï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelArea3Major = new Label(18, 0, "è¡Œæ”¿ç®¡ç†ä¸“ä¸š");
+		               Label labelArea3Year = new Label(19, 0, "ä»äº‹å¹´æ•°");
 		               
-		               Label labelGoodAtArea4 = new Label(20, 0, "ÊÇ·ñ´ÓÊÂ¿ÆÑ§ÑĞ¾¿ÁìÓò£º1=ÊÇ£¬0=·ñ");
-		               Label labelArea4Major = new Label(21, 0, "¿ÆÑ§ÑĞ¾¿×¨Òµ");
-		               Label labelArea4Year = new Label(22, 0, "´ÓÊÂÄêÊı");
+		               Label labelGoodAtArea4 = new Label(20, 0, "æ˜¯å¦ä»äº‹ç§‘å­¦ç ”ç©¶é¢†åŸŸï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelArea4Major = new Label(21, 0, "ç§‘å­¦ç ”ç©¶ä¸“ä¸š");
+		               Label labelArea4Year = new Label(22, 0, "ä»äº‹å¹´æ•°");
 		               
-		               Label labelGoodAtArea5 = new Label(23, 0, "ÊÇ·ñ´ÓÊÂÒ½Ñ§½ÌÓıÁìÓò£º1=ÊÇ£¬0=·ñ");
-		               Label labelArea5Major = new Label(24, 0, "Ò½Ñ§½ÌÓı×¨Òµ");
-		               Label labelArea5Year = new Label(25, 0, "´ÓÊÂÄêÊı");
+		               Label labelGoodAtArea5 = new Label(23, 0, "æ˜¯å¦ä»äº‹åŒ»å­¦æ•™è‚²é¢†åŸŸï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelArea5Major = new Label(24, 0, "åŒ»å­¦æ•™è‚²ä¸“ä¸š");
+		               Label labelArea5Year = new Label(25, 0, "ä»äº‹å¹´æ•°");
 		               
-		               Label labelhasFillSurvey1 = new Label(26, 0, "ÊÇ·ñÍê³É°æ±¾1µÄÎÊ¾íÌîĞ´£º1=ÊÇ£¬0=·ñ");
+		               Label labelhasFillSurvey1 = new Label(26, 0, "æ˜¯å¦å®Œæˆç‰ˆæœ¬1çš„é—®å·å¡«å†™ï¼š1=æ˜¯ï¼Œ0=å¦");
 		               
-		               Label labelhasFillaccount = new Label(27, 0, "ÊÇ·ñÍê³ÉÕË»§ĞÅÏ¢ÌîĞ´£º1=ÊÇ£¬0=·ñ");
-		               Label labelhasFillSurvey2 = new Label(28, 0, "ÊÇ·ñÍê³É°æ±¾2µÄÎÊ¾íÌîĞ´£º1=ÊÇ£¬0=·ñ");
+		               Label labelhasFillaccount = new Label(27, 0, "æ˜¯å¦å®Œæˆè´¦æˆ·ä¿¡æ¯å¡«å†™ï¼š1=æ˜¯ï¼Œ0=å¦");
+		               Label labelhasFillSurvey2 = new Label(28, 0, "æ˜¯å¦å®Œæˆç‰ˆæœ¬2çš„é—®å·å¡«å†™ï¼š1=æ˜¯ï¼Œ0=å¦");
 		               
 		               ws.addCell(labelUserId);
 		               ws.addCell(labelAge);
@@ -1505,10 +1505,10 @@ public class UserBean extends HibernateBase {
 		               Label[] labarr = new Label[90];
 		               
 		               for(int i=0; i<=20; i++){
-		            	   labarr[1+i*4]= new Label(1+i*4, 0, "¶ş¼¶Ö¸±ê("+i+")");
-		            	   labarr[2+i*4]= new Label(2+i*4, 0, "ÊìÏ¤³Ì¶È");
-		            	   labarr[3+i*4]= new Label(3+i*4, 0, "ÖØÒª³Ì¶È");
-		            	   labarr[4+i*4]= new Label(4+i*4, 0, "¿É¿ØĞÔ");
+		            	   labarr[1+i*4]= new Label(1+i*4, 0, "äºŒçº§æŒ‡æ ‡("+i+")");
+		            	   labarr[2+i*4]= new Label(2+i*4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+		            	   labarr[3+i*4]= new Label(3+i*4, 0, "é‡è¦ç¨‹åº¦");
+		            	   labarr[4+i*4]= new Label(4+i*4, 0, "å¯æ§æ€§");
 			               ws.addCell(labarr[1+i*4]);
 			               ws.addCell(labarr[2+i*4]);
 			               ws.addCell(labarr[3+i*4]);
@@ -1520,7 +1520,7 @@ public class UserBean extends HibernateBase {
 		               for (int i = 0; i < list.size(); i++) {
 		                   
 		            	   //String expertName = list.get(i).getName();
-		            	   Label labelUserId_i= new Label(0, i+1, list.get(i).getName()+"");//±íÊ¾µÚ
+		            	   Label labelUserId_i= new Label(0, i+1, list.get(i).getName()+"");//è¡¨ç¤ºç¬¬
 			               Label labelAge_i = new Label(1, i+1, list.get(i).getAge()+"");
 			               Label labelEducation_i = new Label(2, i+1, list.get(i).getEducation()+"");
 			               Label labelWorkPlace_i = new Label(3, i+1, list.get(i).getWorkPlace()+"");
@@ -1595,9 +1595,9 @@ public class UserBean extends HibernateBase {
 			               ws.addCell(labelhasFillSurvey2_i);
 		               }
 		             
-		              //Ğ´½øÎÄµµ
+		              //å†™è¿›æ–‡æ¡£
 		               wwb.write();
-		              // ¹Ø±ÕExcel¹¤×÷²¾¶ÔÏó
+		              // å…³é—­Excelå·¥ä½œç°¿å¯¹è±¡
 		               wwb.close();
 
 
@@ -1618,42 +1618,42 @@ public class UserBean extends HibernateBase {
 		        WritableSheet sheet = null;
 		        Label label = null;
 
-		        // ´´½¨Excel±í
+		        // åˆ›å»ºExcelè¡¨
 		        try {
 		        	 WritableWorkbook wwb = null;
 		             
-		               // ´´½¨¿ÉĞ´ÈëµÄExcel¹¤×÷²¾
+		               // åˆ›å»ºå¯å†™å…¥çš„Excelå·¥ä½œç°¿
 		        	   String fileName = request.getRealPath("/download/"+ "expert_financial_data.xls") ;
 		               File file=new File(fileName);
 		              
 		               if (!file.exists()) {
 		                   file.createNewFile();
 		               }
-		               //ÒÔfileNameÎªÎÄ¼şÃûÀ´´´½¨Ò»¸öWorkbook
+		               //ä»¥fileNameä¸ºæ–‡ä»¶åæ¥åˆ›å»ºä¸€ä¸ªWorkbook
 		               wwb = Workbook.createWorkbook(file);
 		               
 		               
-		               // ´´½¨¹¤×÷±í
-		               WritableSheet ws = wwb.createSheet("ÒøĞĞÕË»§ĞÅÏ¢", 0);
+		               // åˆ›å»ºå·¥ä½œè¡¨
+		               WritableSheet ws = wwb.createSheet("é“¶è¡Œè´¦æˆ·ä¿¡æ¯", 0);
 		               
 		               
 		               
 		               
-		               //²éÑ¯Êı¾İ¿âÖĞËùÓĞµÄÊı¾İ
+		               //æŸ¥è¯¢æ•°æ®åº“ä¸­æ‰€æœ‰çš„æ•°æ®
 		               //List<StuEntity> list= StuService.getAllByDb();
-		               //Òª²åÈëµ½µÄExcel±í¸ñµÄĞĞºÅ£¬Ä¬ÈÏ´Ó0¿ªÊ¼
-		               Label labelUserName= new Label(0, 0, "ĞÕÃû");//±íÊ¾µÚ
-		               Label labelWorkPlace = new Label(1, 0, "¹¤×÷µ¥Î»");
-		               Label labelIdCardNumber = new Label(2, 0, "Éí·İÖ¤ºÅ");
-		               Label labelBankName = new Label(3, 0, "¿ª»§ÒøĞĞÈ«³Æ");
-		               Label labelBankCardNumber = new Label(4, 0, "ÒøĞĞÕËºÅ");
-		               Label labelDuty = new Label(5, 0, "Ö°Îñ");
+		               //è¦æ’å…¥åˆ°çš„Excelè¡¨æ ¼çš„è¡Œå·ï¼Œé»˜è®¤ä»0å¼€å§‹
+		               Label labelUserName= new Label(0, 0, "å§“å");//è¡¨ç¤ºç¬¬
+		               Label labelWorkPlace = new Label(1, 0, "å·¥ä½œå•ä½");
+		               Label labelIdCardNumber = new Label(2, 0, "èº«ä»½è¯å·");
+		               Label labelBankName = new Label(3, 0, "å¼€æˆ·é“¶è¡Œå…¨ç§°");
+		               Label labelBankCardNumber = new Label(4, 0, "é“¶è¡Œè´¦å·");
+		               Label labelDuty = new Label(5, 0, "èŒåŠ¡");
 		               
-		               Label labelPname = new Label(6, 0, "ÊÕ¿îÈËĞÕÃû");
-		               Label labelPaddress = new Label(7, 0, "ÊÕ¿îµØÖ·");
-		               Label labelPpostCard = new Label(8, 0, "ÓÊ±à");
-		               Label labelPidCardNumber = new Label(9, 0, "ÊÕ¿îÈËÉí·İÖ¤ºÅ");
-		               Label labelPtelephone = new Label(10, 0, "ÊÕ¿îÈËÊÖ»ú");
+		               Label labelPname = new Label(6, 0, "æ”¶æ¬¾äººå§“å");
+		               Label labelPaddress = new Label(7, 0, "æ”¶æ¬¾åœ°å€");
+		               Label labelPpostCard = new Label(8, 0, "é‚®ç¼–");
+		               Label labelPidCardNumber = new Label(9, 0, "æ”¶æ¬¾äººèº«ä»½è¯å·");
+		               Label labelPtelephone = new Label(10, 0, "æ”¶æ¬¾äººæ‰‹æœº");
 		               
 		               ws.addCell(labelUserName);
 		               ws.addCell(labelWorkPlace);
@@ -1672,10 +1672,10 @@ public class UserBean extends HibernateBase {
 		               Label[] labarr = new Label[90];
 		               
 		               for(int i=0; i<=20; i++){
-		            	   labarr[1+i*4]= new Label(1+i*4, 0, "¶ş¼¶Ö¸±ê("+i+")");
-		            	   labarr[2+i*4]= new Label(2+i*4, 0, "ÊìÏ¤³Ì¶È");
-		            	   labarr[3+i*4]= new Label(3+i*4, 0, "ÖØÒª³Ì¶È");
-		            	   labarr[4+i*4]= new Label(4+i*4, 0, "¿É¿ØĞÔ");
+		            	   labarr[1+i*4]= new Label(1+i*4, 0, "äºŒçº§æŒ‡æ ‡("+i+")");
+		            	   labarr[2+i*4]= new Label(2+i*4, 0, "ç†Ÿæ‚‰ç¨‹åº¦");
+		            	   labarr[3+i*4]= new Label(3+i*4, 0, "é‡è¦ç¨‹åº¦");
+		            	   labarr[4+i*4]= new Label(4+i*4, 0, "å¯æ§æ€§");
 			               ws.addCell(labarr[1+i*4]);
 			               ws.addCell(labarr[2+i*4]);
 			               ws.addCell(labarr[3+i*4]);
@@ -1693,7 +1693,7 @@ public class UserBean extends HibernateBase {
 		            	   if(list.get(i).getHasFillSurvey() != 0){
 		            		   List<ExpertBankInfo> exportbBankInfos = getexportbankInfo(expertId);
 				            	 
-			            	   Label labelUserName_i= new Label(0, line, expertName+"");//±íÊ¾µÚ
+			            	   Label labelUserName_i= new Label(0, line, expertName+"");//è¡¨ç¤ºç¬¬
 				               Label labelWorkPlace_i = new Label(1, line, expertWorkPlaceString+"");
 				               Label labelIdCardNumber_i = new Label(2, line, exportbBankInfos.get(0).getIdCardNumber()+"");
 				               Label labelBankName_i = new Label(3, line, exportbBankInfos.get(0).getBankName()+"");
@@ -1727,9 +1727,9 @@ public class UserBean extends HibernateBase {
 		            		                   
 		               }
 		             
-		              //Ğ´½øÎÄµµ
+		              //å†™è¿›æ–‡æ¡£
 		               wwb.write();
-		              // ¹Ø±ÕExcel¹¤×÷²¾¶ÔÏó
+		              // å…³é—­Excelå·¥ä½œç°¿å¯¹è±¡
 		               wwb.close();
 
 

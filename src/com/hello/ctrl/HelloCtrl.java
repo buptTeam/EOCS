@@ -26,7 +26,7 @@ import com.bean.UserBean;
 import com.opensymphony.xwork2.validator.annotations.RegexFieldValidator;
 
 public class HelloCtrl extends BaseCtrl {
-	// ÅÐ¶ÏÊÇ·ñÔÚÓÊ¼þÁÐ±í
+	// ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ð±ï¿½
 	public void checkInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -42,7 +42,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// µÇÂ½ÃûÊÇ·ñÒÑÊ¹ÓÃ
+	// ï¿½ï¿½Â½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 	public void LoginNameIsExist(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -57,7 +57,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ×¨¼Ò×¢²á type=4
+	// ×¨ï¿½ï¿½×¢ï¿½ï¿½ type=4
 	public void ExpertRegistry(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -74,7 +74,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// Ìí¼Ó³ý×¨¼ÒÍâµÄÆäËûÀàµÄÈËÔ± type=1 Î»³¬¼¶¹ÜÀíÔ± 2 Î»²ÆÎñÈËÔ± 3Êý¾ÝÊÕ¼¯ÈËÔ±
+	// ï¿½ï¿½Ó³ï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô± type=1 Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô± 2 Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô± 3ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½Ô±
 	public void addOtherUser(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -91,7 +91,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// µÇÂ½
+	// ï¿½ï¿½Â½
 	public void login(HttpServletRequest request, HttpServletResponse response) {
 		UserBean userBean = new UserBean();
 		String mesString = null;
@@ -106,7 +106,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ¸üÐÂ×¨¼Ò»ù±¾ÐÅÏ¢
+	// ï¿½ï¿½ï¿½ï¿½×¨ï¿½Ò»ï¿½ï¿½ï¿½Ï¢
 	public void updateExpertBasicInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -173,7 +173,7 @@ public class HelloCtrl extends BaseCtrl {
 		writeJSon(response, mesString);
 	}
 
-	// ¸üÐÂ×¨¼ÒÒøÐÐÐÅÏ¢
+	// ï¿½ï¿½ï¿½ï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	public void updateExpertPostInfo(HttpServletRequest request,
 			HttpServletResponse response) {
 		System.out.println("here");
@@ -211,7 +211,7 @@ public class HelloCtrl extends BaseCtrl {
 		}
 		writeJSon(response, mesString);
 	}
-	//»ñÈ¡Ò»¼¶·ÖÀà
+	//ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void getFirstLevel(HttpServletRequest request,
 			HttpServletResponse response) {
 		UserBean userBean = new UserBean();
@@ -565,13 +565,13 @@ public class HelloCtrl extends BaseCtrl {
 		   while (itr.hasNext()) {
 		    FileItem item = (FileItem) itr.next();
 		    if (item.isFormField()) {
-		     System.out.println("±íµ¥²ÎÊýÃû:" + item.getFieldName() + "£¬±íµ¥²ÎÊýÖµ:" + item.getString("UTF-8"));
+		     System.out.println("ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:" + item.getFieldName() + "ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½Öµ:" + item.getString("UTF-8"));
 		    } else {
 		     if (item.getName() != null && !item.getName().equals("")) {
-		      System.out.println("ÉÏ´«ÎÄ¼þµÄ´óÐ¡:" + item.getSize());
-		      System.out.println("ÉÏ´«ÎÄ¼þµÄÀàÐÍ:" + item.getContentType());
-		      // item.getName()·µ»ØÉÏ´«ÎÄ¼þÔÚ¿Í»§¶ËµÄÍêÕûÂ·¾¶Ãû³Æ
-		      System.out.println("ÉÏ´«ÎÄ¼þµÄÃû³Æ:" + item.getName());
+		      System.out.println("ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½Ä´ï¿½Ð¡:" + item.getSize());
+		      System.out.println("ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:" + item.getContentType());
+		      // item.getName()ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½Ú¿Í»ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½
+		      System.out.println("ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:" + item.getName());
 
 		      File tempFile = new File(item.getName());
 
@@ -579,12 +579,12 @@ public class HelloCtrl extends BaseCtrl {
 		      System.out.println(request.getSession().getServletContext().getRealPath("/download"));
 
 		      item.write(file);
-		      request.setAttribute("upload.message", "ÉÏ´«ÎÄ¼þ³É¹¦£¡");
+		      request.setAttribute("upload.message", "ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 		      DataBean dBean=new DataBean();
 		      System.out.println("HelloCtrl.uploadFile()"+typeString);
 		      dBean.getData(request,item.getName(),typeString);
 		     }else{
-		      request.setAttribute("upload.message", "Ã»ÓÐÑ¡ÔñÉÏ´«ÎÄ¼þ£¡");
+		      request.setAttribute("upload.message", "Ã»ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½");
 		     }
 		    }
 		   }
@@ -592,7 +592,7 @@ public class HelloCtrl extends BaseCtrl {
 		   e.printStackTrace();
 		  } catch (Exception e) {
 		   e.printStackTrace();
-		   request.setAttribute("upload.message", "ÉÏ´«ÎÄ¼þÊ§°Ü£¡");
+		   request.setAttribute("upload.message", "ï¿½Ï´ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½");
 		  }
 		  try {
 			  if(typeString == "1"){
@@ -717,4 +717,6 @@ public class HelloCtrl extends BaseCtrl {
 		}
 		writeJSon(response, mesString);
 	}
+
+	
 }

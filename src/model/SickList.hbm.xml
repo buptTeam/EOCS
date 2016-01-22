@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-1-22 13:28:25 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.SickList" table="sickList">
+        <id name="index" type="int">
+            <column name="index" />
+            <generator class="assigned" />
+        </id>
+        <property name="secondId" type="java.lang.Integer">
+            <column name="secondId" />
+        </property>
+        <property name="secondName" type="string">
+            <column name="secondName" />
+        </property>
+        <property name="zonghe" type="java.lang.Double">
+            <column name="zonghe" precision="22" scale="0" />
+        </property>
+        <property name="importanceAve" type="java.lang.Double">
+            <column name="importanceAve" precision="22" scale="0" />
+        </property>
+        <property name="protectiveAve" type="java.lang.Double">
+            <column name="protectiveAve" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
