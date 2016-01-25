@@ -65,15 +65,16 @@
 	<hr>
 	 <div >
 	 <div class="form-group">
-	 	<div class="col-sm-offset-4">
-	 	<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button"  class="btn btn-success btn-sm">查看第一轮所选择重大疾病和健康问题</a>
-	 	</div>
+	 	
 	 </div>
 	 <div class="form-group">
 		
-	 	<div class="col-sm-offset-4 ">
+	 	<div class="col-sm-offset-2 ">
     	<font color="black" id="warning" size="3" >
     	请选择您认为的<strong>20项</strong>重大疾病和健康问题。已选择<font id="countNumberAll"></font>项
+    	<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button"  class="btn btn-success btn-sm">查看第一轮所选择重大疾病和健康问题</a>
+    	<br>
+    	红色对勾代表您第一轮选择的疾病，并且该疾病的综合指数得分位于所有疾病或健康问题的前20名。
     	<!-- 请从左侧一级指标中选择您希望评价的<strong>20项</strong>疾病，右上方<font color="red">红色数字</font>会提示您一共选择的数量哦。 -->
  
     	</font>
@@ -117,7 +118,7 @@
 		</div>
 		
 		-->
-		<div class="col-md-5 col-md-offset-3" >
+		<div class="col-md-8 col-md-offset-2" >
 			<!-- 
 			<div class="text-center">
 			
@@ -144,10 +145,10 @@
 								<thead>
                     				<tr>
                       					<th >序号</th>
-                      					<th>是否<br>选择</th>
+                      					<th>是否选择</th>
                       					<th>重大疾病和健康问题</th>
-                      					<th>综合<br>指数</th>
-                      					<th>是否是前<br>20名</th>
+                      					<th>综合指数</th>
+                      					<th></th>
                       					
                     				</tr>
                   				</thead>
