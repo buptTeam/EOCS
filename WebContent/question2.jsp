@@ -81,7 +81,7 @@
 			</ul>
 		</div>
 		<div>
-			<font color="red" id="warning" style="display:none">其中输入框旁边的红色数字为，该指标的平均值。</font>
+			<font color="red" id="warning" style="display:none">其中输入框旁边的数字为，该指标的平均值。</font>
 		</div>
 	</div>
 </div>
@@ -95,7 +95,7 @@
                       <th>重大程度</th>
                       <th>专家均分</th>
                       <th>可预防程度</th>
-                      <th>专家均分</th>
+                      <th>全体专家均分</th>
                     </tr>
                   </thead>
                   <tbody>
