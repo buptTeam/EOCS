@@ -143,19 +143,23 @@
 				<table class="table table-hover">
 								<thead>
                     				<tr>
-                      					<th style="display:none">序号</th>
+                      					<th >序号</th>
                       					<th>是否<br>选择</th>
                       					<th>重大疾病和健康问题</th>
                       					<th>综合<br>指数</th>
-                      					<th>第一轮是否<br>选择</th>
+                      					<th>是否是前<br>20名</th>
                       					
                     				</tr>
                   				</thead>
                   				<tbody id="treleSicktable">
                   					<tr class="alltrsClass" id="treleSick2" style="display:none">
+                  					<th id="showid" style="">1</th>
                   						<th id="id" style="display:none">1</th>
                   						<th><input type="checkbox" value="" id="secondLevelCheckBox" style="width: 19px;height: 25px;"><font style="display:none" id="ProtectiveAve"></font>
-                  						<font style="display:none" id="ImportanceAve"></font></th>
+                  						<font style="display:none" id="ImportanceAve"></font>
+                  						<font style="display:none" id="ismanul">0</font>
+                  						
+                  						</th>
                   						<th id="name">糖尿病</th>
                   						<th id="zhonghe">0.45</th>
                   						<th id="select" style="color:red;">√</th>
@@ -194,7 +198,8 @@
                <input style="display:none" type="text" id="firstidarrs" name="firstidarrs">
 		      <input style="display:none" type="text" id="allnames" name="allnames">
 		      <input style="display:none" type="text" id="ImportanceAvearr" name="ImportanceAvearr">
-		            <input style="display:none" type="text" id="ProtectiveAvearr" name="ProtectiveAvearr">
+		      <input style="display:none" type="text" id="ProtectiveAvearr" name="ProtectiveAvearr">
+		       <input style="display:none" type="text" id="isManualAddzrr" name="isManualAddzrr">
                                                      请问确认提交已选择的<span></span>20项重大疾病或健康问题吗？
   				<br>
   				提交后将不能修改！
@@ -233,7 +238,7 @@
                     </tr>
                   </thead>
                  	<tbody id="tbodytestnotselect">
-                  		<tr id="tbodytrtestnotselet"  >
+                  		<tr id="tbodytrtestnotselet" style="display:none" >
                       		<th id="no">1</th>
                       		<th id="illname">肺癌</th>
                       		<th id="illpercent">10%</th>

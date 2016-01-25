@@ -1235,7 +1235,7 @@ public class UserBean extends HibernateBase {
 	//获取所有原始的二级指标
 	public List<SecondLevel> getAllSecondLevel() throws HibernateException {
 		try {
-			String queryString = "from SecondLevel";
+			String queryString = "from SecondLevel where id <131";
 			beginTransaction();
 			Query query = session.createQuery(queryString);
 			//query.setParameter(0, fitstLevelId);

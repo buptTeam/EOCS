@@ -54,7 +54,7 @@ $(function() {
 	$('#accountConfirmBtn').click(function() {
 		//console.info("accountConfirmBtn");
 
-		accountConfirmBtnClick();
+		//accountConfirmBtnClick();
 	});
 	
 	
@@ -88,16 +88,30 @@ initialFirstDiv=function(){
 		success : function(data) {
 			var entity=data.entity;
 			var firstDiv=$('#treleSicktable');
+			var tanchuDiv=$('#tbodytestnotselect');
+			var j=1;
 			for(var i=0;i<entity.length;i++){
 				var ele=$('#treleSick2').clone(true);
 				ele.attr("id","treleSick2Formal");
 				ele.find('#id').text(entity[i].SecondId);
+				ele.find('#showid').text(i+1);
 				ele.find('#name').text(entity[i].SecondName);
 				ele.find('#zhonghe').text(entity[i].Zonghe);
 				ele.find('#ProtectiveAve').html(entity[i].ProtectiveAve);
 				ele.find('#ImportanceAve').html(entity[i].ImportanceAve);
-				if(entity[i].isSeleted==0)
+				if(entity[i].isSeleted==0||i>=20)
 					ele.find('#select').text("");
+				if(entity[i].isSeleted==1){
+					//console.info("hellk");
+					var ele1=$('#tbodytrtestnotselet').clone(true);
+					ele1.attr("id","tbodytrtestnotseletFormal");
+					ele1.find('#no').text(j+"");
+					j+=1;
+					ele1.find('#illname').text(entity[i].SecondName);
+					ele1.find('#illpercent').text(entity[i].Zonghe);
+					ele1.css("display","");
+					tanchuDiv.append(ele1);
+				}
 				//ele.find('#countNumber').attr("id","countNumber"+(i+1));
 				ele.css("display","");
 				firstDiv.append(ele);
@@ -174,7 +188,96 @@ bindClick=function(){
 		
 	});
 	
-	
+	$('#addSickBtn').click(function(){
+		var empty="";
+		//console.info("hello"+$('#addSickText').val());
+		if($('#addSickText').val()==empty){
+			$.messager.show({
+				title : 'warning',
+				msg : '<font size="3">请输入要添加的疾病名称</font>',
+				timeout : 1500,
+				showType : 'fade',
+				style : {
+					 right:'',
+		             bottom:''
+				}
+			});
+		}else{
+			if(Number($('#countNumberAll').text())==20){
+				$.messager.show({
+					title : 'warning',
+					msg : '<font size="3">至多有20项</font>',
+					timeout : 1500,
+					showType : 'fade',
+					style : {
+						 right:'',
+			             bottom:''
+					}
+				});
+				$(this).attr("checked",false);
+				
+			}else{
+				
+				var currentName=$('#addSickText').val();
+				
+				var all=$('.alltrsClass');
+				//console.info($('.alert-dismissible').size());
+				for(var i=1;i<all.size();i++){
+					var lookFor=all.eq(i).find('#name').text();
+					//console.info(lookFor+currentId);
+					if(currentName==lookFor){
+						$.messager.show({
+							title : 'warning',
+							msg : '<font size="3">已有该疾病</font>',
+							timeout : 1500,
+							showType : 'fade',
+							style : {
+								 right:'',
+					             bottom:''
+							}
+						});
+						return 0;
+					}
+					
+				}
+				var ele=$('#treleSick2').clone(true);
+				ele.attr("id","treleSick2Formal");
+				//ele.find('#id').text(entity[i].SecondId);
+				ele.find('#showid').text($('.alltrsClass').size());
+				//$('.alltrsClass')
+				ele.find('#name').text(currentName);
+				ele.find('#zhonghe').text("");
+				ele.find('#ProtectiveAve').html("0");
+				ele.find('#select').html("");
+				ele.find('#ImportanceAve').html("0");
+				ele.find('#secondLevelCheckBox').attr("checked",true);
+				
+				ele.find('#ismanul').html("1");
+				
+				ele.css("display","");
+				$('#treleSicktable').append(ele);
+				
+				//$('#selectedDivTest').append(ele);
+				total_select+=1;
+				$('#countNumberAll').text(total_select);
+				$('#addSickText').val("");
+				$.ajax({
+					url : "hello/addsecondLeveSick.php",
+					data: {"sickNmae" : currentName},
+					dataType : "json",
+					success : function(data) {
+						//console.info(data.entity);
+						ele.find('#id').text(data.entity);
+					}
+				});
+				
+//				for(var i=0;i<$('#selectedItrmTest').size();i++){
+//					console.info()
+//				}
+				
+			}
+		}
+	});
 	
 	
 };
@@ -198,7 +301,7 @@ fillContent=function(){
 		var allids="";
 		var firstidarrs="";
 		var allnames="";
-		//var isManualAddzrr=all.eq(1).find('#isManualAdd').text();
+		var isManualAddzrr="";
 		var ImportanceAvearr="";
 		var ProtectiveAvearr="";
 		//console.info($('.alert-dismissible').size());
@@ -209,6 +312,8 @@ fillContent=function(){
 				allnames+=","+all.eq(i).find('#name').text();
 				ImportanceAvearr+=","+all.eq(i).find('#ImportanceAve').text();
 				ProtectiveAvearr+=","+all.eq(i).find('#ProtectiveAve').text();
+				isManualAddzrr+=","+all.eq(i).find('#ismanul').text();
+				
 			}
 		}
 		$('#allids').val(allids);
@@ -216,6 +321,7 @@ fillContent=function(){
 		$('#allnames').val(allnames);
 		$('#ImportanceAvearr').val(ImportanceAvearr);
 		$('#ProtectiveAvearr').val(ProtectiveAvearr);
+		$('#isManualAddzrr').val(isManualAddzrr);
 		return true;
 	}
 };

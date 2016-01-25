@@ -4,7 +4,7 @@
     String allids="";
     String allnames="";
     String firstidarrs="";
-    
+    String ismanuals="";
     String ImportanceAve="";
     String ProtectiveAve="";
    
@@ -18,7 +18,8 @@
     	
     	 ImportanceAve=request.getParameter("ImportanceAvearr");
     	 ProtectiveAve=request.getParameter("ProtectiveAvearr");
-    	 
+    	 ismanuals=request.getParameter("isManualAddzrr");
+    	 System.out.println("ImportanceAve"+ImportanceAve);
     }
 %>
     
@@ -104,7 +105,7 @@
                   String[] idarr=allids.split(",");
                   String[] firstidarr=firstidarrs.split(",");
                   String[] namearr=allnames.split(",");
-
+                  String[] ismanualarr=ismanuals.split(",");
                   String[] ImportanceAvearr=ImportanceAve.split(",");
                   String[] ProtectiveAvearr=ProtectiveAve.split(",");
                  
@@ -118,7 +119,7 @@
                       <input type="text" id="secondLevelId" name="secondLevelId" style="display:none" value="<%=idarr[i] %>">
                       <input type="text" name="firstLevelId" style="display:none" value="<%=firstidarr[i] %>">
                       <input type="text" name="sickName" style="display:none" value="<%=namearr[i]%>">
-                      <input type="text" name="isManualAdd" style="display:none" value="<%=0%>">
+                      <input type="text" name="isManualAdd" style="display:none" value="<%=ismanualarr[i]%>">
                       <input type="text" class="form-control" id="name" name="familiar" placeholder="请输入0-9的数字">
                       		
                       		 
