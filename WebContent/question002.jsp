@@ -51,32 +51,23 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<dl>
-				<dd>
-					<br>
-					<br>
-					<p class="MsoNormal">
-						&nbsp;&nbsp;&nbsp;&nbsp;<span>随着我国社会经济的快速发展，</span><span>工业化</span><span>、城镇化、老龄化、信息化、</span><span>全球化不断</span><span>加速</span><span>。这些变化在给</span><span>居民生活水平</span><span>带来</span><span>实质性</span><span>改善的同时</span><span>，也带来了环境恶化、生活方式西化</span><span>、</span><span>人口老化和疾病谱变化。</span><span>与</span><span>改革开放初期相比，</span><span>我国</span><span>居民所面临的重大健康问题</span><span>已发生</span><span>了</span><span>根</span><span>本性的转变</span><span>。面对</span><span>这一局面，如何</span><span>科学筛选</span><span>可</span><span>预防</span><span>的</span><span>重大疾病</span><span>和健康</span><span>问题</span><span>，对于我国</span><span>重新规划</span><span>公共卫生体系</span><span>，</span><span>确定</span><span>投入</span><span>方向和重点，高效发挥</span><span>其</span><span>预防疾病和维护健康</span><span>的</span><span>功能具有重大的指导意义。</span><span>为此</span><span>，中国工程院决定</span><span>开展</span><span>“</span><span>我国未来可预防重大疾病问卷调查</span><span>”</span><span>，</span><span>采用德尔菲专家调查法向</span><span>中国</span><span>工程院（医学学部）</span><span>全体</span><span>院士</span><span>、</span><span>院士</span><span>候选人</span><span>及特邀专家</span><span>提出咨询，</span><span>在</span><span>专家意见的基础上科学凝练出当前的重大健康问题</span><span>及其</span><span>可</span><span>预防</span><span>性</span><span>，向</span><span>国家提出相应政策建议</span><span>。</span>
-						
-					</p>
-					<p class="MsoNormal">
-						&nbsp;&nbsp;&nbsp;&nbsp;<span>本研究</span><span>计划进行2轮</span><span>调查</span><span>，每轮大约</span><span>需要</span><span>20</span><span>-30</span><span>分钟</span><span>，</span><span>采用网络调查的形式</span><span>。</span><span>为此所设计的系统</span><span>将确保您</span><span>提供的信息</span><span>在</span><span>导出给</span><span>分析人员时已经过匿名化处理，</span><span>而</span><span>负责</span><span>发放</span><span>咨询费的</span><span>财务人员</span><span>不能得到你提供的</span><span>专业</span><span>咨询</span><span>信息</span><span>。</span><span>咨询费</span><span>将在收到第</span><span>2轮</span><span>调查回复后一次性发放</span><span>。</span><span>除了</span><span>财务人员</span><span>，其他人都不会接触到您的私人信息包括姓名、电话和身份证号码等。</span>
-						
-					</p>
-					<p class="MsoNormal">
-						&nbsp;&nbsp;&nbsp;&nbsp;<span>第一轮</span><span>调查内容包括</span><span>专家咨询问卷</span><span>和</span><span>专家</span><span>信息收集表</span><span>。</span><span>请您在</span><span>2015</span><span>年</span><span>X</span><span>月</span><span>X</span><span>日</span><span>之前，</span><span>登陆中国</span><span>工程院如下网址进行网上调查</span><span>回复</span><span>。</span><span>我们将在</span><span>总结了所有专家第一轮调查结果后，</span><span>发放第二轮调查</span><span>咨询问卷。届时，</span><span>我们也</span><span>将同时</span><span>发放第一轮专家意见的</span><span>分析结果</span><span>供大家参考。</span>
-						
-					</p>
-					<p class="MsoNormal">
-						&nbsp;&nbsp;&nbsp;&nbsp;<span>请</span><span>登陆网址：</span><a href="http://www.cae.cn/cae/html/main/index.html"><span class="15">http://www.cae.cn/cae/html/main/index.html</span></a><span>，请点击“</span><span>我国未来可预防重大疾病问卷调查</span><span>”</span><span>，进行问卷调查。</span>
-						
-					</p>
-					<p class="MsoNormal">
-						&nbsp;&nbsp;&nbsp;&nbsp;<span>万分感谢</span><span>您</span><span>的参与和配合</span><span>！</span>
-					</p>
-				</dd>
-				
-			</dl>
+			<br>
+			<br>
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;为了完成中国工程院“我国全民健康与医药卫生事业发展战略研究”重大咨询项目，中国工程院医药卫生学部决定开展“我国未来可预防重大疾病问卷调查”，采用德尔菲专家调查法进行两轮调查，向中国工程院（医药学部）全体院士、2015年度医药学部院士候选人及特邀专家提出咨询，在专家意见的基础上科学凝练出当前的重大健康问题及其可预防性，向国家提出相应政策建议。
+			</h3>
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;本次调查为本研究计划的第二轮调查，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。
+			</h3>
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;第二轮调查内容为专家咨询问卷。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，请点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。
+			</h3>
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;您的参与攸关我国未来预防医学体系建设。
+			</h3>
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;万分感谢您的参与和配合！
+			</h3>
 		</div>
 	</div>
 </div>
