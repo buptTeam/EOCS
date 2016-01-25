@@ -43,7 +43,7 @@
    <ul id="questionTab" class="nav nav-tabs">
    		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
    		<li ><a href="javascript:;" ><font id="shuoming">第一轮调查说明</font></a></li>
-   		<li class="active"><a href="question0.jsp" >填写规则</a></li>
+   		<li class="active"><a href="question0.jsp" >第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
  
@@ -57,7 +57,9 @@
 			<h3>
 				&nbsp;&nbsp;&nbsp;&nbsp;为了方便您的选择，我们预先将第一轮专家评价过的125种重大疾病或健康问题列出，供您选择。在每一个疾病或健康问题的后面都列有其在第一轮评价中综合指数的结果，如果您第一轮调查选择的疾病综合指数得分位于所有评价的疾病或健康问题得分的前20名，则该疾病综合指数后面有一红色对勾（√），供您参考。您也可以添加新的重大疾病和健康问题。需要注意的是，为了保证资料分析的客观、公正，避免调查偏倚，本次调查限定您可选择的重大疾病和健康问题数目总计为20项，不能多也不能少。
 			</h3>
-			
+			<h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;您可点击屏幕右上方 “查看第一轮所选择重大疾病或健康问题” 绿色按钮。弹出的对话框内显示的是您第一轮选择的疾病或健康问题及综合指数得分。
+			</h3>
 			<h3>
 				&nbsp;&nbsp;&nbsp;&nbsp;当您确定并提交了20项重大疾病和健康问题后，仍需进入到重大疾病或健康问题评价页面，对该疾病（或健康问题）的熟悉程度、重大程度、可预防程度进行量化评价。在重大程度打分框和可预防程度打分框后面，我们分别列出了该疾病在第一轮调查中的重大程度均值和可预防程度均值，供您参考。
 			</h3>

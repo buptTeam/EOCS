@@ -57,21 +57,27 @@
 	
 	<ul id="questionTab" class="nav nav-tabs">
 		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li>  
-   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal2"><font id="shuoming">第一轮调查说明</font></a></li>
-   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal3">填写规则</a></li>
+   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal2">第二轮调查说明</a></li>
+   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal3">第二轮填写规则</a></li>
    		<li class="active"><a href="question1.jsp" > 重大疾病选择</a></li>
    		<li ><a href="javascript:;" >重大疾病评价</a></li>
 	</ul>
 	<hr>
 	 <div >
 	 <div class="form-group">
+	 	<div class="col-sm-offset-4">
+	 	<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button"  class="btn btn-success btn-sm">查看第一轮所选择重大疾病和健康问题</a>
+	 	</div>
+	 </div>
+	 <div class="form-group">
+		
 	 	<div class="col-sm-offset-4 ">
     	<font color="black" id="warning" size="3" >
     	请选择您认为的<strong>20项</strong>重大疾病和健康问题。已选择<font id="countNumberAll"></font>项
     	<!-- 请从左侧一级指标中选择您希望评价的<strong>20项</strong>疾病，右上方<font color="red">红色数字</font>会提示您一共选择的数量哦。 -->
  
     	</font>
-    	<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button" style="display:none" class="btn btn-success btn-sm">查看第一轮所选择重大疾病和健康问题</a>
+    	
     	</div>
     	
     	<!-- 
@@ -133,33 +139,46 @@
 			</div>
 			 -->
 			<div class="table-bordered scroll" style="height:500px" >
+				<div>
 				<table class="table table-hover">
 								<thead>
                     				<tr>
-                      					<th>序号</th>
-                      					<th>是否选择</th>
+                      					<th style="display:none">序号</th>
+                      					<th>是否<br>选择</th>
                       					<th>重大疾病和健康问题</th>
-                      					<th>综合指数</th>
-                      					<th>第一轮是否选择</th>
+                      					<th>综合<br>指数</th>
+                      					<th>第一轮是否<br>选择</th>
                       					
                     				</tr>
                   				</thead>
                   				<tbody id="treleSicktable">
                   					<tr class="alltrsClass" id="treleSick2" style="display:none">
-                  						<th id="id">1</th>
-                  						<th><input type="checkbox" value="" id="secondLevelCheckBox"><font style="display:none" id="ProtectiveAve"></font>
+                  						<th id="id" style="display:none">1</th>
+                  						<th><input type="checkbox" value="" id="secondLevelCheckBox" style="width: 19px;height: 25px;"><font style="display:none" id="ProtectiveAve"></font>
                   						<font style="display:none" id="ImportanceAve"></font></th>
                   						<th id="name">糖尿病</th>
                   						<th id="zhonghe">0.45</th>
-                  						<th id="select">√</th>
+                  						<th id="select" style="color:red;">√</th>
                   						
                   					</tr>
                   				</tbody>
 							</table>
+				</div>
+				<div id="hiddenadd" >
+					<font color="red">如果您认为仍有重大问题未列入，请在此处添加：</font>
+					<div class="input-group" >
+						<input type="text" id="addSickText" class="form-control" placeholder="请自行填写上述遗漏重大疾病或健康问题">
+      					<span class="input-group-btn">
+       	 				<button class="btn btn-default" id="addSickBtn" type="button">添加</button>
+						</span>
+					</div>
+				</div>
 							
-	</div>
+		</div>
+		
 
 </div>
+<br>
 <br>
 <a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">提交已选择选项</a>
 
@@ -214,7 +233,7 @@
                     </tr>
                   </thead>
                  	<tbody id="tbodytestnotselect">
-                  		<tr id="tbodytrtestnotselet" style="display:none" >
+                  		<tr id="tbodytrtestnotselet"  >
                       		<th id="no">1</th>
                       		<th id="illname">肺癌</th>
                       		<th id="illpercent">10%</th>
