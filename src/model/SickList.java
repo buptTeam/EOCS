@@ -1,6 +1,6 @@
 package model;
 
-// Generated 2016-1-22 13:28:25 by Hibernate Tools 3.4.0.CR1
+// Generated 2016-1-26 0:08:09 by Hibernate Tools 3.4.0.CR1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +20,7 @@ public class SickList implements java.io.Serializable {
 	private Double zonghe;
 	private Double importanceAve;
 	private Double protectiveAve;
+	private Integer show;
 
 	public SickList() {
 	}
@@ -29,13 +30,15 @@ public class SickList implements java.io.Serializable {
 	}
 
 	public SickList(int index, Integer secondId, String secondName,
-			Double zonghe, Double importanceAve, Double protectiveAve) {
+			Double zonghe, Double importanceAve, Double protectiveAve,
+			Integer show) {
 		this.index = index;
 		this.secondId = secondId;
 		this.secondName = secondName;
 		this.zonghe = zonghe;
 		this.importanceAve = importanceAve;
 		this.protectiveAve = protectiveAve;
+		this.show = show;
 	}
 
 	@Id
@@ -91,6 +94,15 @@ public class SickList implements java.io.Serializable {
 
 	public void setProtectiveAve(Double protectiveAve) {
 		this.protectiveAve = protectiveAve;
+	}
+
+	@Column(name = "show")
+	public Integer getShow() {
+		return this.show;
+	}
+
+	public void setShow(Integer show) {
+		this.show = show;
 	}
 
 }

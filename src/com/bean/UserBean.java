@@ -1235,7 +1235,7 @@ public class UserBean extends HibernateBase {
 	//获取所有原始的二级指标
 	public List<SecondLevel> getAllSecondLevel() throws HibernateException {
 		try {
-			String queryString = "from SecondLevel where id <131";
+			String queryString = "from SecondLevel where id <164";
 			beginTransaction();
 			Query query = session.createQuery(queryString);
 			//query.setParameter(0, fitstLevelId);
@@ -1949,6 +1949,7 @@ public class UserBean extends HibernateBase {
 						map.put("ProtectiveAve", sickList.get(i).getProtectiveAve());
 						map.put("SecondId", sickList.get(i).getSecondId());
 						map.put("Zonghe", sickList.get(i).getZonghe());
+						map.put("show", sickList.get(i).getShow());
 						map.put("SecondName", sickList.get(i).getSecondName());
 						map.put("isSeleted", 0);
 						resList.add(map);

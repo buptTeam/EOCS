@@ -91,16 +91,6 @@ initialFirstDiv=function(){
 			var tanchuDiv=$('#tbodytestnotselect');
 			var j=1;
 			for(var i=0;i<entity.length;i++){
-				var ele=$('#treleSick2').clone(true);
-				ele.attr("id","treleSick2Formal");
-				ele.find('#id').text(entity[i].SecondId);
-				ele.find('#showid').text(i+1);
-				ele.find('#name').text(entity[i].SecondName);
-				ele.find('#zhonghe').text(entity[i].Zonghe);
-				ele.find('#ProtectiveAve').html(entity[i].ProtectiveAve);
-				ele.find('#ImportanceAve').html(entity[i].ImportanceAve);
-				if(entity[i].isSeleted==0||i>=20)
-					ele.find('#select').text("");
 				if(entity[i].isSeleted==1){
 					//console.info("hellk");
 					var ele1=$('#tbodytrtestnotselet').clone(true);
@@ -112,9 +102,23 @@ initialFirstDiv=function(){
 					ele1.css("display","");
 					tanchuDiv.append(ele1);
 				}
-				//ele.find('#countNumber').attr("id","countNumber"+(i+1));
-				ele.css("display","");
-				firstDiv.append(ele);
+				if(entity[i].show==1){
+					var ele=$('#treleSick2').clone(true);
+					ele.attr("id","treleSick2Formal");
+					ele.find('#id').text(entity[i].SecondId);
+					ele.find('#showid').text(i+1);
+					ele.find('#name').text(entity[i].SecondName);
+					ele.find('#zhonghe').text(entity[i].Zonghe);
+					ele.find('#ProtectiveAve').html(entity[i].ProtectiveAve);
+					ele.find('#ImportanceAve').html(entity[i].ImportanceAve);
+					if(entity[i].isSeleted==0||i>=20)
+						ele.find('#select').text("");
+					
+					//ele.find('#countNumber').attr("id","countNumber"+(i+1));
+					ele.css("display","");
+					firstDiv.append(ele);
+				}
+				
 			}
 			
 		}
