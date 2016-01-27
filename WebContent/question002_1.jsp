@@ -50,13 +50,17 @@
 	</ul>
 <div class="container-fluid">
 	<div class="row-fluid">
+	
+	<br>
 		<div class="span12">
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span> <span class="marker">中国工程院 “我国未来可预防重大疾病问卷调查”第一轮调查工作已于2015年11月30日结束。共有95位专家做出了有效回复，提出可预防重大疾病和健康问题共计125个。现将其中按照综合指数排名最靠前的30个列于下表，供您在第二轮调查选择时参考。各项指标的意义和计算方法见表下的注释。</span></span>
-			</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院 “我国未来可预防重大疾病问卷调查”第一轮调查工作已于2015年11月30日结束。共有95位专家做出了有效回复，提出可预防重大疾病和健康问题共计125个。现将其中按照综合指数排名最靠前的30个列于下表，供您在第二轮调查选择时参考。各项指标的意义和计算方法见表下的注释。</span></strong>
+			</p>
+			
 		</div>
 	</div>
 </div>
+
 <div class="table-responsive">
                
                

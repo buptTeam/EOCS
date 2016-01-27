@@ -43,34 +43,29 @@
    <ul id="questionTab" class="nav nav-tabs">
    		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
    		<li class="active"><a href="question002.jsp" >第二轮调查说明</a></li>
-   		<li ><a href="javascript:;" id="question0">填写规则</a></li>
+   		<li ><a href="javascript:;" id="question0">第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
  		<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button" style="display:none" class="btn btn-success btn-sm"  algin="right">查看第一轮所选择重大疾病和健康问题</a>
 	</ul>
 <div class="container-fluid">
 	<div class="row-fluid">
+	
+	<br>
 		<div class="span12">
-			<br>
-			<br>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;为了完成中国工程院“我国全民健康与医药卫生事业发展战略研究”重大咨询项目，中国工程院医药卫生学部决定开展“我国未来可预防重大疾病问卷调查”，采用德尔菲专家调查法进行两轮调查，向中国工程院（医药学部）全体院士、2015年度医药学部院士候选人及特邀专家提出咨询，在专家意见的基础上科学凝练出当前的重大健康问题及其可预防性，向国家提出相应政策建议。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;本次调查为本研究计划的第二轮调查，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;第二轮调查内容为专家咨询问卷。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，请点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;您的参与攸关我国未来预防医学体系建设。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;万分感谢您的参与和配合！
-			</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院医药卫生学部“我国未来可预防重大疾病问卷调查”第二轮调查仅限于参加过第一轮调查的专家，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查将在得知第一轮调查主要结果的基础上，邀请您对我国未来可预防重大疾病或健康问题再次做出选择和打分。仍采用问卷形式。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">您的参与攸关我国未来预防医学体系建设。万分感谢您的参与和配合！</span></strong>
+			</p>
 		</div>
 	</div>
 </div>
+
 <hr>
 <div class="checkbox col-md-offset-4" id="readrules">
   					<label>
