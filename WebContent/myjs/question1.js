@@ -26,7 +26,7 @@ $(function() {
 	
 	$('#countNumberAll').text(total_select);
 	bindClick();
-	initialFirstDiv();
+	//initialFirstDiv();
 	$('#toConfirm').click(function() {
 		var flag = true;
 		if(Number($('#countNumberAll').text())<20){

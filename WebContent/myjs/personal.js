@@ -1,17 +1,17 @@
 
 personInit = function() {
-	$.ajax({
-		url : "hello/getFirstLevel.php",
-		dataType : "json",
-		success : function(data) {
-			autoFill();
-//			getfirstlevel('#area1Majorfirst', data.entity);
-//			getfirstlevel('#area2Majorfirst', data.entity);
-//			getfirstlevel('#area3Majorfirst', data.entity);
-//			getfirstlevel('#area4Majorfirst', data.entity);
-//			getfirstlevel('#area5Majorfirst', data.entity);
-		}
-	});
+//	$.ajax({
+//		url : "hello/getFirstLevel.php",
+//		dataType : "json",
+//		success : function(data) {
+//			autoFill();
+////			getfirstlevel('#area1Majorfirst', data.entity);
+////			getfirstlevel('#area2Majorfirst', data.entity);
+////			getfirstlevel('#area3Majorfirst', data.entity);
+////			getfirstlevel('#area4Majorfirst', data.entity);
+////			getfirstlevel('#area5Majorfirst', data.entity);
+//		}
+//	});
 
 	$('#personalBtn').click(function() {
 	/*

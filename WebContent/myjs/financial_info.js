@@ -37,7 +37,7 @@ $(function(){
 	});
 	});
 	var initialPage = 1;
-	get_page_view(initialPage);
+	//get_page_view(initialPage);
 	bind();
 });
 

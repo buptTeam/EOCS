@@ -1,6 +1,6 @@
 init=function(){
 	
-	set_table_view();
+	//set_table_view();
 }
 	//get_page_view();
 	
