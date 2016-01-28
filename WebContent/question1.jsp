@@ -684,36 +684,30 @@
 		<div class="modal-body" >
 <div class="container-fluid">
 	<div class="row-fluid">
+	
+	<br>
 		<div class="span12">
-			
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;为了方便您的选择，我们预先将第一轮专家评价过的125种重大疾病或健康问题列出，供您选择。在每一个疾病或健康问题的后面都列有其在第一轮评价中综合指数的结果，如果您第一轮调查选择的疾病综合指数得分位于所有评价的疾病或健康问题得分的前20名，则该疾病综合指数后面有一红色对勾（√），供您参考。您也可以添加新的重大疾病和健康问题。需要注意的是，为了保证资料分析的客观、公正，避免调查偏倚，本次调查限定您可选择的重大疾病和健康问题数目总计为20项，不能多也不能少。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;您可点击屏幕右上方 “查看第一轮所选择重大疾病或健康问题” 绿色按钮。弹出的对话框内显示的是您第一轮选择的疾病或健康问题及综合指数得分。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;当您确定并提交了20项重大疾病和健康问题后，仍需进入到重大疾病或健康问题评价页面，对该疾病（或健康问题）的熟悉程度、重大程度、可预防程度进行量化评价。在重大程度打分框和可预防程度打分框后面，我们分别列出了该疾病在第一轮调查中的重大程度均值和可预防程度均值，供您参考。
-			</h3>
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;具体填表方法如下：
-			</h3>
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;1）<strong>熟悉程度：</strong>采用尺度调查法。0表示“最不熟悉”，9表示“最熟悉”，请根据自己对该疾病（或问题）的熟悉程度填写0-9之间的任意数字。
-			</h3>
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;2）<strong>重大程度：</strong>0表示“最不重大”，9表示“最重大”。
-			</h3>
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;3）<strong>可预防程度：</strong>0表示“完全不可预防”，9表示“完全可以预防”。
-			</h3>
-			
-			
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">为了方便您的选择，我们预先将第一轮专家评提出的125种重大疾病或健康问题一一列出，供您选择。本轮调查仍限定您可选择的重大疾病和健康问题数目总计为20项，不能多也不能少。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">在125个重大疾病或健康问题清单中，每一个后面都列有其在第一轮评价中获得的综合指数；系统同时采用红色对勾（√）的形式标示了那些您第一轮曾经做过的选择或建议。这些信息供您在本次做出选择时参考。对您认为是我国未来可预防的重大疾病和健康问题，请点击其前面对应的方框做出标记。如再次点击，则取消选择。所有20项选择完毕后，请点击屏幕下方的“提交已选择选项”按钮进行提交。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">当您确定并提交了20项重大疾病和健康问题后，系统将自动进入到重大疾病或健康问题评价页面，您需要对所选出的20个重大疾病（或健康问题）的熟悉程度、重大程度、可预防程度进行打分。在重大程度打分框和可预防程度打分框后面，我们分别列出了该疾病在第一轮调查中的重大程度均值和可预防程度均值，供您参考。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">具体填表方法如下：</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">1）熟悉程度：采用尺度调查法。0表示“最不熟悉”，9表示“最熟悉”，请根据自己对该疾病（或问题）的熟悉程度填写0-9之间的任意数字。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">2）重大程度：0表示“最不重大”，9表示“最重大”。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">3）可预防程度：0表示“完全不可预防”，9表示“完全可以预防”。</span></strong>
+			</p>
 		</div>
 	</div>
 </div>
@@ -743,23 +737,18 @@
 		<div class="modal-body" >
 <div class="container-fluid">
 	<div class="row-fluid">
+	
+	<br>
 		<div class="span12">
-			
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;为了完成中国工程院“我国全民健康与医药卫生事业发展战略研究”重大咨询项目，中国工程院医药卫生学部决定开展“我国未来可预防重大疾病问卷调查”，采用德尔菲专家调查法进行两轮调查，向中国工程院（医药学部）全体院士、2015年度医药学部院士候选人及特邀专家提出咨询，在专家意见的基础上科学凝练出当前的重大健康问题及其可预防性，向国家提出相应政策建议。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;本次调查为本研究计划的第二轮调查，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;第二轮调查内容为专家咨询问卷。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，请点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;您的参与攸关我国未来预防医学体系建设。
-			</h3>
-			<h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;万分感谢您的参与和配合！
-			</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院医药卫生学部“我国未来可预防重大疾病问卷调查”第二轮调查仅限于参加过第一轮调查的专家，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查将在得知第一轮调查主要结果的基础上，邀请您对我国未来可预防重大疾病或健康问题再次做出选择和打分。仍采用问卷形式。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">您的参与攸关我国未来预防医学体系建设。万分感谢您的参与和配合！</span></strong>
+			</p>
 		</div>
 	</div>
 </div>

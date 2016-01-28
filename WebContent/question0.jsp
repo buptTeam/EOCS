@@ -42,7 +42,7 @@
 <body>
    <ul id="questionTab" class="nav nav-tabs">
    		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
-   		<li ><a href="javascript:;" ><font id="shuoming">第一轮调查说明</font></a></li>
+   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal2"><font id="shuoming">第一轮调查说明</font></a></li>
    		<li class="active"><a href="question0.jsp" >第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
@@ -431,6 +431,63 @@
 		</div>
 	</div>
 </div>
+		</div>
+        <div class="modal-footer">
+			<!-- 
+			<button type="button" id="changPwdBtn"  class="btn btn-success" >确认</button>
+			<button id="cancelBtn" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        	 -->
+        </div>
+	</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="confirmModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button id="closechPwdBtn" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title" id="myModalLabel">第二轮调查说明</h4>
+		</div>
+		<div class="modal-body" >
+<div class="container-fluid">
+	<div class="row-fluid">
+	
+	<br>
+		<div class="span12">
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院医药卫生学部“我国未来可预防重大疾病问卷调查”第二轮调查仅限于参加过第一轮调查的专家，大约需要20-30分钟，采用网络调查的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查将在得知第一轮调查主要结果的基础上，邀请您对我国未来可预防重大疾病或健康问题再次做出选择和打分。仍采用问卷形式。请您在2016年X月X日前，登陆网址：http://www.cae.cn/cae/html/main/index.html，点击“我国未来可预防重大疾病问卷调查”，进行网上问卷调查。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">您的参与攸关我国未来预防医学体系建设。万分感谢您的参与和配合！</span></strong>
+			</p>
+		</div>
+	</div>
+</div>
+			<!-- 
+			
+			<div class="form-group">
+				<label for="password" class="col-sm-4 control-label"><font size="4">设置新密码</font></label>
+				<div class="col-sm-5 ">
+					<input type="password"  class="form-control" id="password" name="password" placeholder="请输入您的密码" >
+				</div> 
+			</div>
+			<div class="form-group">
+				<label for="confirmpassword" class="col-sm-4 control-label "  ><font size="4">确认新密码</font></label>
+				<div class="col-sm-5 ">
+					<input type="password"  class="form-control easyui-validatebox"  id="password1" name="confirmpassword"  placeholder="请再次输入您的密码" >
+				</div>
+			</div>
+			<div class="form-group">
+				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">密码至少6位且必须由数字和字母组成!</font>
+				<br>
+				<font color="red" size="3" style="float:left; " class="col-sm-offset-3 col-sm-8">请牢记新密码，丢失无法找回！</font>
+			</div>
+			 -->
 		</div>
         <div class="modal-footer">
 			<!-- 
