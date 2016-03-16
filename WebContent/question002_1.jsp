@@ -402,7 +402,7 @@
     						<strong><font size="3" >我已了解第一轮调查结果</font></strong>
     						
   					</label>
-  					<a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">前往第二轮调查说明
+  					<a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">下一步
   					</a>
 </div>
 <hr>

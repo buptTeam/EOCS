@@ -61,7 +61,7 @@
     						<strong><font size="3" >我已经了解调查说明</font></strong>
     						
   					</label>
-  					<button id="toConfirm"  data-toggle="modal"   class="btn btn-success btn-sm col-sm-offset-5">前往填写规则</button>
+  					<button id="toConfirm"  data-toggle="modal"   class="btn btn-success btn-sm col-sm-offset-5">下一步</button>
 </div>
 <hr>
  

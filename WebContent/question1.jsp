@@ -148,7 +148,7 @@
                       					<th>是否选择</th>
                       					<th>重大疾病和健康问题</th>
                       					<th>综合指数</th>
-                      					<th>您的第一轮选择</th>
+                      					<th style="text-align:center">您的第一轮选择</th>
                       					
                     				</tr>
                   				</thead>
@@ -163,7 +163,7 @@
                   						</th>
                   						<th id="name">糖尿病</th>
                   						<th id="zhonghe">0.45</th>
-                  						<th id="select" style="color:red;">√</th>
+                  						<th id="select" style="color:red;text-align:center">√</th>
                   						
                   					</tr>
                   				</tbody>

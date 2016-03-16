@@ -85,7 +85,7 @@
     						<strong><font size="3" >我已经了解规则</font></strong>
     						
   					</label>
-  					<a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">前往重大疾病选择</a>
+  					<a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">下一步</a>
 </div>
 <hr>
 
