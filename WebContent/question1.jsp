@@ -169,6 +169,7 @@
                   				</tbody>
 							</table>
 				</div>
+				<!-- 
 				<div id="hiddenadd" >
 					<font color="red">如果您认为仍有重大问题未列入，请在此处添加：</font>
 					<div class="input-group" >
@@ -178,6 +179,7 @@
 						</span>
 					</div>
 				</div>
+				 -->
 							
 		</div>
 		
