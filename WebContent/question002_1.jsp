@@ -71,315 +71,71 @@
                       <th>序号</th>
                       <th>重大疾病和健康问题</th>
                       <th>选择<br>(%)</th>
-                      <th>重大程度<br>均值</th>
+                     
                       <th>重大程度<br>加权均值</th>
-                      <th>可预防程度<br>均值</th>
+                      
                       <th>可预防程度<br>加权均值</th>
                       <th>综合指数</th>
                     </tr>
                   </thead>
                  	<tbody id="tbodytest">
-                  		<tr  >
-                      		<th id="no">1</th>
-                      		<th id="illName"><font color="goldenrod">糖尿病</font></th>
-                      		<th id="choose">73</th>
-                      		<th id="imE">5.8</th>
-                      		<th id="imJE">5.0</th>
-                      		<th id="proE">4.9</th>
-                      		<th id="proJE">4.3</th>
-                      		<th id="all">1.32</th>
-                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">2</th>
-                      		<th id="illName"><font color="goldenrod">肺癌</font></th>
-                      		<th id="choose">73</th>
-                      		<th id="imE">6.0</th>
-                      		<th id="imJE">5.0</th>
-                      		<th id="proE">4.0</th>
-                      		<th id="proJE">3.4</th>
-                      		<th id="all">1.28</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">3</th>
-                      		<th id="illName"><font color="goldenrod">病毒性肝炎</font></th>
-                      		<th id="choose">67</th>
-                      		<th id="imE">5.4</th>
-                      		<th id="imJE">4.3</th>
-                      		<th id="proE">5.0</th>
-                      		<th id="proJE">4.0</th>
-                      		<th id="all">1.25</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">4</th>
-                      		<th id="illName"><font color="goldenrod">新发突发传染病</font></th>
-                      		<th id="choose">65</th>
-                      		<th id="imE">5.5</th>
-                      		<th id="imJE">3.9</th>
-                      		<th id="proE">3.4</th>
-                      		<th id="proJE">2.5</th>
-                      		<th id="all">1.15</th>                      	                     		
-                    	</tr>
-                   		<tr>
-                      		<th id="no">5</th>
-                      		<th id="illName"><font color="goldenrod">艾滋病</font></th>
-                      		<th id="choose">62</th>
-                      		<th id="imE">5.0</th>
-                      		<th id="imJE">3.8</th>
-                      		<th id="proE">4.4</th>
-                      		<th id="proJE">3.3</th>
-                      		<th id="all">1.15</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">6</th>
-                      		<th id="illName"><font color="goldenrod">高血压</font></th>
-                      		<th id="choose">60</th>
-                      		<th id="imE">5.0</th>
-                      		<th id="imJE">4.4</th>
-                      		<th id="proE">4.1</th>
-                      		<th id="proJE">3.7</th>
-                      		<th id="all">1.10</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">7</th>
-                      		<th id="illName"><font color="goldenrod">冠心病/心肌梗死</font></th>
-                      		<th id="choose">58</th>
-                      		<th id="imE">4.7</th>
-                      		<th id="imJE">4.1</th>
-                      		<th id="proE">4.0</th>
-                      		<th id="proJE">3.5</th>
-                      		<th id="all">1.06</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">8</th>
-                      		<th id="illName"><font color="goldenrod">吸烟</font></th>
-                      		<th id="choose">54</th>
-                      		<th id="imE">4.5</th>
-                      		<th id="imJE">4.1</th>
-                      		<th id="proE">4.3</th>
-                      		<th id="proJE">3.9</th>
-                      		<th id="all">1.03</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">9</th>
-                      		<th id="illName"><font color="goldenrod">脑卒中</font></th>
-                      		<th id="choose">56</th>
-                      		<th id="imE">4.6</th>
-                      		<th id="imJE">3.9</th>
-                      		<th id="proE">3.8</th>
-                      		<th id="proJE">3.2</th>
-                      		<th id="all">1.02</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">10</th>
-                      		<th id="illName"><font color="goldenrod">肝癌</font></th>
-                      		<th id="choose">56</th>
-                      		<th id="imE">4.4</th>
-                      		<th id="imJE">3.7</th>
-                      		<th id="proE">3.3</th>
-                      		<th id="proJE">2.8</th>
-                      		<th id="all">0.98</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">11</th>
-                      		<th id="illName"><font color="goldenrod">抑郁症</font></th>
-                      		<th id="choose">53</th>
-                      		<th id="imE">3.9</th>
-                      		<th id="imJE">2.9</th>
-                      		<th id="proE">3.0</th>
-                      		<th id="proJE">2.3</th>
-                      		<th id="all">0.91</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">12</th>
-                      		<th id="illName"><font color="goldenrod">空气污染</font></th>
-                      		<th id="choose">47</th>
-                      		<th id="imE">4.1</th>
-                      		<th id="imJE">3.1</th>
-                      		<th id="proE">3.6</th>
-                      		<th id="proJE">2.8</th>
-                      		<th id="all">0.90</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">13</th>
-                      		<th id="illName"><font color="goldenrod">肺结核</font></th>
-                      		<th id="choose">45</th>
-                      		<th id="imE">3.5</th>
-                      		<th id="imJE">2.8</th>
-                      		<th id="proE">3.1</th>
-                      		<th id="proJE">2.5</th>
-                      		<th id="all">0.82</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">14</th>
-                      		<th id="illName"><font color="goldenrod">农药、激素及抗生素等残留</font></th>
-                      		<th id="choose">43</th>
-                      		<th id="imE">3.5</th>
-                      		<th id="imJE">2.6</th>
-                      		<th id="proE">3.2</th>
-                      		<th id="proJE">2.4</th>
-                      		<th id="all">0.80</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">15</th>
-                      		<th id="illName"><font color="goldenrod">老年痴呆</font></th>
-                      		<th id="choose">46</th>
-                      		<th id="imE">3.7</th>
-                      		<th id="imJE">2.8</th>
-                      		<th id="proE">2.1</th>
-                      		<th id="proJE">1.6</th>
-                      		<th id="all">0.79</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">16</th>
-                      		<th id="illName"><font color="goldenrod">道路交通伤害</font></th>
-                      		<th id="choose">41</th>
-                      		<th id="imE">3.2</th>
-                      		<th id="imJE">2.6</th>
-                      		<th id="proE">3.1</th>
-                      		<th id="proJE">2.5</th>
-                      		<th id="all">0.76</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">17</th>
-                      		<th id="illName"><font color="goldenrod">乳腺癌</font></th>
-                      		<th id="choose">42</th>
-                      		<th id="imE">3.3</th>
-                      		<th id="imJE">2.7</th>
-                      		<th id="proE">2.5</th>
-                      		<th id="proJE">2.0</th>
-                      		<th id="all">0.74</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">18</th>
-                      		<th id="illName"><font color="goldenrod">水污染</font></th>
-                      		<th id="choose">37</th>
-                      		<th id="imE">3.1</th>
-                      		<th id="imJE">2.4</th>
-                      		<th id="proE">2.9</th>
-                      		<th id="proJE">2.2</th>
-                      		<th id="all">0.70</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">19</th>
-                      		<th id="illName"><font color="goldenrod">不健康饮食（高盐、高脂、少蔬菜水果等）</font></th>
-                      		<th id="choose">37</th>
-                      		<th id="imE">2.9</th>
-                      		<th id="imJE">2.7</th>
-                      		<th id="proE">3.0</th>
-                      		<th id="proJE">2.8</th>
-                      		<th id="all">0.70</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">20</th>
-                      		<th id="illName"><font color="goldenrod">胃癌</font></th>
-                      		<th id="choose">38</th>
-                      		<th id="imE">3.0</th>
-                      		<th id="imJE">2.7</th>
-                      		<th id="proE">2.0</th>
-                      		<th id="proJE">1.7</th>
-                      		<th id="all">0.66</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">21</th>
-                      		<th id="illName"><font color="goldenrod">结直肠癌</font></th>
-                      		<th id="choose">36</th>
-                      		<th id="imE">2.9</th>
-                      		<th id="imJE">2.5</th>
-                      		<th id="proE">2.1</th>
-                      		<th id="proJE">1.8</th>
-                      		<th id="all">0.64</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">22</th>
-                      		<th id="illName"><font color="goldenrod">非法使用食品添加剂</font></th>
-                      		<th id="choose">34</th>
-                      		<th id="imE">2.7</th>
-                      		<th id="imJE">2.0</th>
-                      		<th id="proE">2.6</th>
-                      		<th id="proJE">1.9</th>
-                      		<th id="all">0.63</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">23</th>
-                      		<th id="illName"><font color="goldenrod">超重肥胖</font></th>
-                      		<th id="choose">33</th>
-                      		<th id="imE">2.6</th>
-                      		<th id="imJE">2.3</th>
-                      		<th id="proE">2.5</th>
-                      		<th id="proJE">2.2</th>
-                      		<th id="all">0.61</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">24</th>
-                      		<th id="illName"><font color="goldenrod">血脂异常</font></th>
-                      		<th id="choose">33</th>
-                      		<th id="imE">2.6</th>
-                      		<th id="imJE">2.3</th>
-                      		<th id="proE">2.5</th>
-                      		<th id="proJE">2.2</th>
-                      		<th id="all">0.61</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">25</th>
-                      		<th id="illName"><font color="goldenrod">土壤污染</font></th>
-                      		<th id="choose">31</th>
-                      		<th id="imE">2.6</th>
-                      		<th id="imJE">2.0</th>
-                      		<th id="proE">2.3</th>
-                      		<th id="proJE">1.7</th>
-                      		<th id="all">0.58</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">26</th>
-                      		<th id="illName"><font color="goldenrod">身体活动不足</font></th>
-                      		<th id="choose">28</th>
-                      		<th id="imE">2.3</th>
-                      		<th id="imJE">2.2</th>
-                      		<th id="proE">2.4</th>
-                      		<th id="proJE">2.3</th>
-                      		<th id="all">0.55</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">27</th>
-                      		<th id="illName"><font color="goldenrod">白血病</font></th>
-                      		<th id="choose">27</th>
-                      		<th id="imE">2.1</th>
-                      		<th id="imJE">1.7</th>
-                      		<th id="proE">1.2</th>
-                      		<th id="proJE">1.0</th>
-                      		<th id="all">0.46</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">28</th>
-                      		<th id="illName"><font color="goldenrod">重大环境污染事故</font></th>
-                      		<th id="choose">23</th>
-                      		<th id="imE">1.9</th>
-                      		<th id="imJE">1.4</th>
-                      		<th id="proE">1.8</th>
-                      		<th id="proJE">1.4</th>
-                      		<th id="all">0.44</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">29</th>
-                      		<th id="illName">宫颈癌</th>
-                      		<th id="choose">21</th>
-                      		<th id="imE">1.6</th>
-                      		<th id="imJE">1.3</th>
-                      		<th id="proE">1.5</th>
-                      		<th id="proJE">1.2</th>
-                      		<th id="all">0.38</th>                      	                     		
-                    	</tr>
-                    	<tr>
-                      		<th id="no">30</th>
-                      		<th id="illName">过量饮酒</th>
-                      		<th id="choose">20</th>
-                      		<th id="imE">1.6</th>
-                      		<th id="imJE">1.4</th>
-                      		<th id="proE">1.6</th>
-                      		<th id="proJE">1.5</th>
-                      		<th id="all">0.37</th>                      	                     		
-                    	</tr>
+                  		<tr><th id="no">1</th><th id="illName"><font color="goldenrod">糖尿病</font></th><th id="choose">73</th><th id="imJE">5.0</th><th id="proJE">4.3</th><th id="all">1.32</th></tr>
+<tr><th id="no">2</th><th id="illName"><font color="goldenrod">肺癌</font></th><th id="choose">73</th><th id="imJE">5.0</th><th id="proJE">3.4</th><th id="all">1.28</th></tr>
+<tr><th id="no">3</th><th id="illName"><font color="goldenrod">病毒性肝炎</font></th><th id="choose">67</th><th id="imJE">4.3</th><th id="proJE">4.0</th><th id="all">1.25</th></tr>
+<tr><th id="no">4</th><th id="illName"><font color="goldenrod">新发突发传染病</font></th><th id="choose">65</th><th id="imJE">3.9</th><th id="proJE">2.5</th><th id="all">1.15</th></tr>
+<tr><th id="no">5</th><th id="illName"><font color="goldenrod">艾滋病</font></th><th id="choose">62</th><th id="imJE">3.8</th><th id="proJE">3.3</th><th id="all">1.15</th></tr>
+<tr><th id="no">6</th><th id="illName"><font color="goldenrod">高血压</font></th><th id="choose">60</th><th id="imJE">4.4</th><th id="proJE">3.7</th><th id="all">1.10</th></tr>
+<tr><th id="no">7</th><th id="illName"><font color="goldenrod">冠心病/心肌梗死</font></th><th id="choose">58</th><th id="imJE">4.1</th><th id="proJE">3.5</th><th id="all">1.06</th></tr>
+<tr><th id="no">8</th><th id="illName"><font color="goldenrod">脑卒中</font></th><th id="choose">56</th><th id="imJE">3.9</th><th id="proJE">3.2</th><th id="all">1.02</th></tr>
+<tr><th id="no">9</th><th id="illName"><font color="goldenrod">肝癌</font></th><th id="choose">56</th><th id="imJE">3.7</th><th id="proJE">2.8</th><th id="all">0.98</th></tr>
+<tr><th id="no">10</th><th id="illName"><font color="goldenrod">吸烟</font></th><th id="choose">54</th><th id="imJE">4.1</th><th id="proJE">3.9</th><th id="all">1.03</th></tr>
+<tr><th id="no">11</th><th id="illName"><font color="goldenrod">抑郁症</font></th><th id="choose">53</th><th id="imJE">2.9</th><th id="proJE">2.3</th><th id="all">0.91</th></tr>
+<tr><th id="no">12</th><th id="illName"><font color="goldenrod">空气污染</font></th><th id="choose">47</th><th id="imJE">3.1</th><th id="proJE">2.8</th><th id="all">0.90</th></tr>
+<tr><th id="no">13</th><th id="illName"><font color="goldenrod">老年痴呆</font></th><th id="choose">46</th><th id="imJE">2.8</th><th id="proJE">1.6</th><th id="all">0.79</th></tr>
+<tr><th id="no">14</th><th id="illName"><font color="goldenrod">肺结核</font></th><th id="choose">45</th><th id="imJE">2.8</th><th id="proJE">2.5</th><th id="all">0.82</th></tr>
+<tr><th id="no">15</th><th id="illName"><font color="goldenrod">农药、激素及抗生素等残留</font></th><th id="choose">43</th><th id="imJE">2.6</th><th id="proJE">2.4</th><th id="all">0.80</th></tr>
+<tr><th id="no">16</th><th id="illName"><font color="goldenrod">乳腺癌</font></th><th id="choose">42</th><th id="imJE">2.7</th><th id="proJE">2.0</th><th id="all">0.74</th></tr>
+<tr><th id="no">17</th><th id="illName"><font color="goldenrod">道路交通伤害</font></th><th id="choose">41</th><th id="imJE">2.6</th><th id="proJE">2.5</th><th id="all">0.76</th></tr>
+<tr><th id="no">18</th><th id="illName"><font color="goldenrod">胃癌</font></th><th id="choose">38</th><th id="imJE">2.7</th><th id="proJE">1.7</th><th id="all">0.66</th></tr>
+<tr><th id="no">19</th><th id="illName"><font color="goldenrod">水污染</font></th><th id="choose">37</th><th id="imJE">2.4</th><th id="proJE">2.2</th><th id="all">0.70</th></tr>
+<tr><th id="no">20</th><th id="illName"><font color="goldenrod">不健康饮食（高盐、高脂、少蔬菜水果等）</font></th><th id="choose">37</th><th id="imJE">2.7</th><th id="proJE">2.8</th><th id="all">0.70</th></tr>
+<tr><th id="no">21</th><th id="illName"><font color="goldenrod">结直肠癌</font></th><th id="choose">36</th><th id="imJE">2.5</th><th id="proJE">1.8</th><th id="all">0.64</th></tr>
+<tr><th id="no">22</th><th id="illName"><font color="goldenrod">非法使用食品添加剂</font></th><th id="choose">34</th><th id="imJE">2.0</th><th id="proJE">1.9</th><th id="all">0.63</th></tr>
+<tr><th id="no">23</th><th id="illName"><font color="goldenrod">超重肥胖</font></th><th id="choose">33</th><th id="imJE">2.3</th><th id="proJE">2.2</th><th id="all">0.61</th></tr>
+<tr><th id="no">24</th><th id="illName"><font color="goldenrod">血脂异常</font></th><th id="choose">33</th><th id="imJE">2.3</th><th id="proJE">2.2</th><th id="all">0.61</th></tr>
+<tr><th id="no">25</th><th id="illName"><font color="goldenrod">土壤污染</font></th><th id="choose">31</th><th id="imJE">2.0</th><th id="proJE">1.7</th><th id="all">0.58</th></tr>
+<tr><th id="no">26</th><th id="illName"><font color="goldenrod">身体活动不足</font></th><th id="choose">28</th><th id="imJE">2.2</th><th id="proJE">2.3</th><th id="all">0.55</th></tr>
+<tr><th id="no">27</th><th id="illName"><font color="goldenrod">白血病</font></th><th id="choose">27</th><th id="imJE">1.7</th><th id="proJE">1.0</th><th id="all">0.46</th></tr>
+<tr><th id="no">28</th><th id="illName"><font color="goldenrod">重大环境污染事故</font></th><th id="choose">23</th><th id="imJE">1.4</th><th id="proJE">1.4</th><th id="all">0.44</th></tr>
+<tr><th id="no">29</th><th id="illName"><font color="goldenrod">宫颈癌</font></th><th id="choose">21</th><th id="imJE">1.3</th><th id="proJE">1.2</th><th id="all">0.38</th></tr>
+<tr><th id="no">30</th><th id="illName"><font color="goldenrod">食管癌</font></th><th id="choose">21</th><th id="imJE">1.4</th><th id="proJE">1.0</th><th id="all">0.36</th></tr>
+<tr><th id="no">31</th><th id="illName"><font  >过量饮酒</font></th><th id="choose">20</th><th id="imJE">1.4</th><th id="proJE">1.5</th><th id="all">0.37</th></tr>
+<tr><th id="no">32</th><th id="illName"><font  >新技术、新材料带来的环境污染</font></th><th id="choose">20</th><th id="imJE">1.1</th><th id="proJE">1.0</th><th id="all">0.36</th></tr>
+<tr><th id="no">33</th><th id="illName"><font  >流行性感冒（简称流感）</font></th><th id="choose">20</th><th id="imJE">1.3</th><th id="proJE">1.1</th><th id="all">0.36</th></tr>
+<tr><th id="no">34</th><th id="illName"><font  >传染性非典型肺炎</font></th><th id="choose">19</th><th id="imJE">1.1</th><th id="proJE">0.8</th><th id="all">0.34</th></tr>
+<tr><th id="no">35</th><th id="illName"><font >慢性阻塞性肺病</font></th><th id="choose">18</th><th id="imJE">1.2</th><th id="proJE">1.0</th><th id="all">0.32</th></tr>
+<tr><th id="no">36</th><th id="illName"><font  >人感染致病性禽流感</font></th><th id="choose">18</th><th id="imJE">1.0</th><th id="proJE">0.8</th><th id="all">0.32</th></tr>
+<tr><th id="no">37</th><th id="illName"><font  >焦虑症</font></th><th id="choose">18</th><th id="imJE">1.0</th><th id="proJE">0.9</th><th id="all">0.31</th></tr>
+<tr><th id="no">38</th><th id="illName"><font  >肌肉骨骼损伤（例如颈椎病、腰椎病、肩腕综合征等）</font></th><th id="choose">17</th><th id="imJE">1.0</th><th id="proJE">1.0</th><th id="all">0.31</th></tr>
+<tr><th id="no">39</th><th id="illName"><font  >慢性肾病</font></th><th id="choose">17</th><th id="imJE">1.0</th><th id="proJE">0.8</th><th id="all">0.30</th></tr>
+<tr><th id="no">40</th><th id="illName"><font  >自杀</font></th><th id="choose">17</th><th id="imJE">0.7</th><th id="proJE">0.6</th><th id="all">0.28</th></tr>
+<tr><th id="no">41</th><th id="illName"><font  >室内环境污染</font></th><th id="choose">16</th><th id="imJE">1.0</th><th id="proJE">0.9</th><th id="all">0.30</th></tr>
+<tr><th id="no">42</th><th id="illName"><font  >药物滥用与药物依赖</font></th><th id="choose">16</th><th id="imJE">0.9</th><th id="proJE">0.9</th><th id="all">0.29</th></tr>
+<tr><th id="no">43</th><th id="illName"><font  >先天性心脏病</font></th><th id="choose">16</th><th id="imJE">1.0</th><th id="proJE">0.8</th><th id="all">0.27</th></tr>
+<tr><th id="no">44</th><th id="illName"><font  >不安全性行为</font></th><th id="choose">14</th><th id="imJE">0.8</th><th id="proJE">0.8</th><th id="all">0.25</th></tr>
+<tr><th id="no">45</th><th id="illName"><font  >登革热</font></th><th id="choose">14</th><th id="imJE">0.8</th><th id="proJE">0.7</th><th id="all">0.24</th></tr>
+<tr><th id="no">46</th><th id="illName"><font >狂犬病</font></th><th id="choose">13</th><th id="imJE">0.8</th><th id="proJE">0.8</th><th id="all">0.23</th></tr>
+<tr><th id="no">47</th><th id="illName"><font  >前列腺癌</font></th><th id="choose">13</th><th id="imJE">0.8</th><th id="proJE">0.6</th><th id="all">0.21</th></tr>
+<tr><th id="no">48</th><th id="illName"><font  >胰腺癌</font></th><th id="choose">13</th><th id="imJE">0.8</th><th id="proJE">0.4</th><th id="all">0.21</th></tr>
+<tr><th id="no">49</th><th id="illName"><font  >食物中毒</font></th><th id="choose">12</th><th id="imJE">0.8</th><th id="proJE">0.8</th><th id="all">0.22</th></tr>
+<tr><th id="no">50</th><th id="illName"><font  >麻疹</font></th><th id="choose">12</th><th id="imJE">0.7</th><th id="proJE">0.8</th><th id="all">0.21</th></tr>
+<tr><th id="no">51</th><th id="illName"><font  >疟疾</font></th><th id="choose">12</th><th id="imJE">0.7</th><th id="proJE">0.6</th><th id="all">0.21</th></tr>
+<tr><th id="no">52</th><th id="illName"><font  >精神分裂症</font></th><th id="choose">12</th><th id="imJE">0.6</th><th id="proJE">0.4</th><th id="all">0.19</th></tr>
+<tr><th id="no">53</th><th id="illName"><font  >老年失能</font></th><th id="choose">12</th><th id="imJE">0.7</th><th id="proJE">0.4</th><th id="all">0.19</th></tr>
+<tr><th id="no">54</th><th id="illName"><font  >鼠疫</font></th><th id="choose">11</th><th id="imJE">0.7</th><th id="proJE">0.7</th><th id="all">0.19</th></tr>
+<tr><th id="no">55</th><th id="illName"><font  >手足口病</font></th><th id="choose">11</th><th id="imJE">0.7</th><th id="proJE">0.7</th><th id="all">0.19</th></tr>
+<tr><th id="no">56</th><th id="illName"><font  >甲型H1N1流感</font></th><th id="choose">11</th><th id="imJE">0.6</th><th id="proJE">0.6</th><th id="all">0.19</th></tr>
+
                     	
                  </tbody>
                 </table>
