@@ -41,8 +41,9 @@
 </head>
 <body>
    <ul id="questionTab" class="nav nav-tabs">
-   		<li class="active"><a href="question002_1.jsp" >第一轮调查结果</a></li>
    		<li ><a href="javascript:;" id="question002">第二轮调查说明</a></li>
+   		<li class="active"><a href="question002_1.jsp" >第一轮调查结果</a></li>
+   		
    		<li ><a href="javascript:;" id="question0">第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
@@ -54,7 +55,7 @@
 	<br>
 		<div class="span12">
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院 “我国未来可预防重大疾病问卷调查”第一轮调查工作已于2015年11月30日结束。共有95位专家做出了有效回复，提出可预防重大疾病和健康问题共计125个。现将其中按照综合指数排名最靠前的30个列于下表，供您在第二轮调查选择时参考。各项指标的意义和计算方法见表下的注释。</span></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">下表为选择率超过10%的56项重大疾病或健康问题，其中选择率超过20%的30个项目的名称用黄标进行了加亮，供您在第二轮调查选择时参考。各项指标的意义和计算方法见表注。</span></strong>
 			</p>
 			
 		</div>
@@ -80,7 +81,7 @@
                  	<tbody id="tbodytest">
                   		<tr  >
                       		<th id="no">1</th>
-                      		<th id="illName">糖尿病</th>
+                      		<th id="illName"><font color="goldenrod">糖尿病</font></th>
                       		<th id="choose">73</th>
                       		<th id="imE">5.8</th>
                       		<th id="imJE">5.0</th>
@@ -91,7 +92,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">2</th>
-                      		<th id="illName">肺癌</th>
+                      		<th id="illName"><font color="goldenrod">肺癌</font></th>
                       		<th id="choose">73</th>
                       		<th id="imE">6.0</th>
                       		<th id="imJE">5.0</th>
@@ -101,7 +102,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">3</th>
-                      		<th id="illName">病毒性肝炎</th>
+                      		<th id="illName"><font color="goldenrod">病毒性肝炎</font></th>
                       		<th id="choose">67</th>
                       		<th id="imE">5.4</th>
                       		<th id="imJE">4.3</th>
@@ -111,7 +112,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">4</th>
-                      		<th id="illName">新发突发传染病</th>
+                      		<th id="illName"><font color="goldenrod">新发突发传染病</font></th>
                       		<th id="choose">65</th>
                       		<th id="imE">5.5</th>
                       		<th id="imJE">3.9</th>
@@ -121,7 +122,7 @@
                     	</tr>
                    		<tr>
                       		<th id="no">5</th>
-                      		<th id="illName">艾滋病</th>
+                      		<th id="illName"><font color="goldenrod">艾滋病</font></th>
                       		<th id="choose">62</th>
                       		<th id="imE">5.0</th>
                       		<th id="imJE">3.8</th>
@@ -131,7 +132,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">6</th>
-                      		<th id="illName">高血压</th>
+                      		<th id="illName"><font color="goldenrod">高血压</font></th>
                       		<th id="choose">60</th>
                       		<th id="imE">5.0</th>
                       		<th id="imJE">4.4</th>
@@ -141,7 +142,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">7</th>
-                      		<th id="illName">冠心病/心肌梗死</th>
+                      		<th id="illName"><font color="goldenrod">冠心病/心肌梗死</font></th>
                       		<th id="choose">58</th>
                       		<th id="imE">4.7</th>
                       		<th id="imJE">4.1</th>
@@ -151,7 +152,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">8</th>
-                      		<th id="illName">吸烟</th>
+                      		<th id="illName"><font color="goldenrod">吸烟</font></th>
                       		<th id="choose">54</th>
                       		<th id="imE">4.5</th>
                       		<th id="imJE">4.1</th>
@@ -161,7 +162,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">9</th>
-                      		<th id="illName">脑卒中</th>
+                      		<th id="illName"><font color="goldenrod">脑卒中</font></th>
                       		<th id="choose">56</th>
                       		<th id="imE">4.6</th>
                       		<th id="imJE">3.9</th>
@@ -171,7 +172,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">10</th>
-                      		<th id="illName">肝癌</th>
+                      		<th id="illName"><font color="goldenrod">肝癌</font></th>
                       		<th id="choose">56</th>
                       		<th id="imE">4.4</th>
                       		<th id="imJE">3.7</th>
@@ -181,7 +182,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">11</th>
-                      		<th id="illName">抑郁症</th>
+                      		<th id="illName"><font color="goldenrod">抑郁症</font></th>
                       		<th id="choose">53</th>
                       		<th id="imE">3.9</th>
                       		<th id="imJE">2.9</th>
@@ -191,7 +192,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">12</th>
-                      		<th id="illName">空气污染</th>
+                      		<th id="illName"><font color="goldenrod">空气污染</font></th>
                       		<th id="choose">47</th>
                       		<th id="imE">4.1</th>
                       		<th id="imJE">3.1</th>
@@ -201,7 +202,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">13</th>
-                      		<th id="illName">肺结核</th>
+                      		<th id="illName"><font color="goldenrod">肺结核</font></th>
                       		<th id="choose">45</th>
                       		<th id="imE">3.5</th>
                       		<th id="imJE">2.8</th>
@@ -211,7 +212,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">14</th>
-                      		<th id="illName">农药、激素及抗生素等残留</th>
+                      		<th id="illName"><font color="goldenrod">农药、激素及抗生素等残留</font></th>
                       		<th id="choose">43</th>
                       		<th id="imE">3.5</th>
                       		<th id="imJE">2.6</th>
@@ -221,7 +222,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">15</th>
-                      		<th id="illName">老年痴呆</th>
+                      		<th id="illName"><font color="goldenrod">老年痴呆</font></th>
                       		<th id="choose">46</th>
                       		<th id="imE">3.7</th>
                       		<th id="imJE">2.8</th>
@@ -231,7 +232,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">16</th>
-                      		<th id="illName">道路交通伤害</th>
+                      		<th id="illName"><font color="goldenrod">道路交通伤害</font></th>
                       		<th id="choose">41</th>
                       		<th id="imE">3.2</th>
                       		<th id="imJE">2.6</th>
@@ -241,7 +242,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">17</th>
-                      		<th id="illName">乳腺癌</th>
+                      		<th id="illName"><font color="goldenrod">乳腺癌</font></th>
                       		<th id="choose">42</th>
                       		<th id="imE">3.3</th>
                       		<th id="imJE">2.7</th>
@@ -251,7 +252,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">18</th>
-                      		<th id="illName">水污染</th>
+                      		<th id="illName"><font color="goldenrod">水污染</font></th>
                       		<th id="choose">37</th>
                       		<th id="imE">3.1</th>
                       		<th id="imJE">2.4</th>
@@ -261,7 +262,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">19</th>
-                      		<th id="illName">不健康饮食（高盐、高脂、少蔬菜水果等）</th>
+                      		<th id="illName"><font color="goldenrod">不健康饮食（高盐、高脂、少蔬菜水果等）</font></th>
                       		<th id="choose">37</th>
                       		<th id="imE">2.9</th>
                       		<th id="imJE">2.7</th>
@@ -271,7 +272,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">20</th>
-                      		<th id="illName">胃癌</th>
+                      		<th id="illName"><font color="goldenrod">胃癌</font></th>
                       		<th id="choose">38</th>
                       		<th id="imE">3.0</th>
                       		<th id="imJE">2.7</th>
@@ -281,7 +282,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">21</th>
-                      		<th id="illName">结直肠癌</th>
+                      		<th id="illName"><font color="goldenrod">结直肠癌</font></th>
                       		<th id="choose">36</th>
                       		<th id="imE">2.9</th>
                       		<th id="imJE">2.5</th>
@@ -291,7 +292,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">22</th>
-                      		<th id="illName">非法使用食品添加剂</th>
+                      		<th id="illName"><font color="goldenrod">非法使用食品添加剂</font></th>
                       		<th id="choose">34</th>
                       		<th id="imE">2.7</th>
                       		<th id="imJE">2.0</th>
@@ -301,7 +302,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">23</th>
-                      		<th id="illName">超重肥胖</th>
+                      		<th id="illName"><font color="goldenrod">超重肥胖</font></th>
                       		<th id="choose">33</th>
                       		<th id="imE">2.6</th>
                       		<th id="imJE">2.3</th>
@@ -311,7 +312,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">24</th>
-                      		<th id="illName">血脂异常</th>
+                      		<th id="illName"><font color="goldenrod">血脂异常</font></th>
                       		<th id="choose">33</th>
                       		<th id="imE">2.6</th>
                       		<th id="imJE">2.3</th>
@@ -321,7 +322,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">25</th>
-                      		<th id="illName">土壤污染</th>
+                      		<th id="illName"><font color="goldenrod">土壤污染</font></th>
                       		<th id="choose">31</th>
                       		<th id="imE">2.6</th>
                       		<th id="imJE">2.0</th>
@@ -331,7 +332,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">26</th>
-                      		<th id="illName">身体活动不足</th>
+                      		<th id="illName"><font color="goldenrod">身体活动不足</font></th>
                       		<th id="choose">28</th>
                       		<th id="imE">2.3</th>
                       		<th id="imJE">2.2</th>
@@ -341,7 +342,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">27</th>
-                      		<th id="illName">白血病</th>
+                      		<th id="illName"><font color="goldenrod">白血病</font></th>
                       		<th id="choose">27</th>
                       		<th id="imE">2.1</th>
                       		<th id="imJE">1.7</th>
@@ -351,7 +352,7 @@
                     	</tr>
                     	<tr>
                       		<th id="no">28</th>
-                      		<th id="illName">重大环境污染事故</th>
+                      		<th id="illName"><font color="goldenrod">重大环境污染事故</font></th>
                       		<th id="choose">23</th>
                       		<th id="imE">1.9</th>
                       		<th id="imJE">1.4</th>
@@ -399,7 +400,7 @@
   					<label>
     					<input type="checkbox" id="readrulesCheck">
     						&nbsp;
-    						<strong><font size="3" >我已了解第一轮调查结果</font></strong>
+    						<strong><font size="3" >我已了解第一轮结果</font></strong>
     						
   					</label>
   					<a id="toConfirm" href="javascript:;" data-toggle="modal"  role="button" class="btn btn-success btn-sm col-sm-offset-5">下一步
@@ -416,7 +417,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'<font size="3">请确认您已阅读了第一轮调查结果</font>',
+		        msg:'<font size="3">请确认您已阅读了第一轮结果</font>',
 		        timeout:1500,
 		        showType:'slide',
 		        style:{
@@ -435,7 +436,7 @@
 	  	}else{
 	  		$.messager.show({
 			        title:'warning',
-			        msg:'<font size="3">请勾选"我已了解第一轮调查结果",并点击按钮"前往第二轮调查说明"</font>',
+			        msg:'<font size="3">请勾选"我已了解第一轮结果",并点击按钮"下一步"</font>',
 			        timeout:2000,
 			        showType:'slide',
 			        
@@ -456,7 +457,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'<font size="3">请勾选"我已了解第一轮调查结果",并点击按钮"前往第二轮调查说明"</font>',
+		        msg:'<font size="3">请勾选"我已了解第一轮结果",并点击按钮"下一步"</font>',
 		        timeout:2000,
 		        showType:'slide',
 		        
@@ -477,7 +478,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'<font size="3">请勾选"我已了解第一轮调查结果",并点击按钮"前往第二轮调查说明"</font>',
+		        msg:'<font size="3">请勾选"我已了解第一轮结果",并点击按钮"下一步"</font>',
 		        timeout:2000,
 		        showType:'slide',
 		        style:{
@@ -496,7 +497,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'<font size="3">请勾选"我已了解第一轮调查结果",并点击按钮"前往第二轮调查说明"</font>',
+		        msg:'<font size="3">请勾选"我已了解第一轮结果",并点击按钮"下一步"</font>',
 		        timeout:2000,
 		        showType:'slide',
 		        style:{

@@ -41,8 +41,9 @@
 </head>
 <body>
    <ul id="questionTab" class="nav nav-tabs">
-   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
    		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal2"><font id="shuoming">第一轮调查说明</font></a></li>
+   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
+   		
    		<li class="active"><a href="question0.jsp" >第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
@@ -54,13 +55,22 @@
 	<br>
 		<div class="span12">
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">为了方便您的选择，我们预先将第一轮专家评提出的125种重大疾病或健康问题一一列出，供您选择。本轮调查仍限定您可选择的重大疾病和健康问题数目总计为20项，不能多也不能少。</span></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第一步：选出20项未来可预防重大疾病或健康问题</span></strong>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">在125个重大疾病或健康问题清单中，每一个后面都列有其在第一轮评价中获得的综合指数；系统同时采用红色对勾（√）的形式标示了那些您第一轮曾经做过的选择或建议。这些信息供您在本次做出选择时参考。对您认为是我国未来可预防的重大疾病和健康问题，请点击其前面对应的方框做出标记。如再次点击，则取消选择。所有20项选择完毕后，请点击屏幕下方的“提交已选择选项”按钮进行提交。</span></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">系统将第一轮专家选择率大于10%的56项重大疾病或健康问题一一列出，供您从中选择。系统同时列出其各自第一轮调查的综合指数供您参考。</span></strong>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">当您确定并提交了20项重大疾病和健康问题后，系统将自动进入到重大疾病或健康问题评价页面，您需要对所选出的20个重大疾病（或健康问题）的熟悉程度、重大程度、可预防程度进行打分。在重大程度打分框和可预防程度打分框后面，我们分别列出了该疾病在第一轮调查中的重大程度均值和可预防程度均值，供您参考。</span></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">本轮选择，你仅需要对认定的重大疾病或健康问题前面对应的方框点击即可做出选择。如再次点击，则取消选择。所有20项选择完毕后，请点击屏幕下方的“提交已选择选项”按钮进行提交。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">本轮调查仍限定选择的重大疾病或健康问题总数为20项（多于20项或少于20项均为无效问卷）。</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二步：对选定的项目的重大程度和可预防程度评分</span></strong>
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">当您确定并提交了20项重大疾病或健康问题后，系统将自动进入到评价页面，您需要对所选出的每一项重大疾病或健康问题的熟悉程度、重大程度、可预防程度进行量化评价。在重大程度打分框和可预防程度打分框后面，我们分别列出了该项目第一轮调查的得分均值，供您参考。</span></strong>
 			</p>
 			<p>
 				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">具体填表方法如下：</span></strong>
