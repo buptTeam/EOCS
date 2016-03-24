@@ -129,7 +129,7 @@
 				<iframe id="question_frame"  name="question_frame" src="question00.jsp" frameborder="0" scrolling="auto" style="border:0px;width:100%;" onload="autoHeight2();"></iframe>
 			</div>
 			<div id="question_version2" style="display:none;">
-				<iframe id="question2_frame"  name="question_frame" src="question002_1.jsp" frameborder="0" scrolling="auto" style="border:0px;width:100%;" onload="autoHeight2();"></iframe>
+				<iframe id="question2_frame"  name="question_frame" src="question002.jsp" frameborder="0" scrolling="auto" style="border:0px;width:100%;" onload="autoHeight2();"></iframe>
 			</div>
 			<div id="scan_question1" style="display:none;">
 				<iframe id="completed_question_frame1"  name="completed_question_frame2" src="question3.jsp" frameborder="0" scrolling="auto" style="border:0px;width:100%;" onload="autoHeight4();"></iframe>

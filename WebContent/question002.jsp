@@ -452,7 +452,7 @@
 
   $("#toConfirm").click(function(){
   	if($("#readrulesCheck").attr("checked")){
-  		var backURL="question0.jsp";
+  		var backURL="question002_1.jsp";
   		var url = 'window.location.href="' + backURL+'"';
 			setTimeout(url, 100);
   	}else{
