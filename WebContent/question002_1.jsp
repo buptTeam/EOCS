@@ -141,7 +141,7 @@
                 </table>
                
               </div>
-             <p contenteditable="false"><small><span style="font-size: 14px; line-height: 20px;"> &nbsp;&nbsp;注：这30项疾病或健康问题按照综合指数从高到低的顺序进行展示。</span></small></p>
+             <p contenteditable="false"><small><span style="font-size: 14px; line-height: 20px;"> &nbsp;&nbsp;注：这56项疾病或健康问题按照综合指数从高到低的顺序进行展示。</span></small></p>
 
 <hr>
 <div class="container-fluid">
