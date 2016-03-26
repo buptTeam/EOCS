@@ -145,25 +145,25 @@
 				<table class="table table-hover">
 								<thead>
                     				<tr>
-                      					<th >序号</th>
-                      					<th>是否选择</th>
-                      					<th>重大疾病和健康问题</th>
-                      					<th>综合指数</th>
+                      					<th align="center">序号</th>
+                      					<th align="center">是否选择</th>
+                      					<th align="center">重大疾病和健康问题</th>
+                      					<th align="center">综合指数</th>
                       					
                       					
                     				</tr>
                   				</thead>
                   				<tbody id="treleSicktable">
                   					<tr class="alltrsClass" id="treleSick2" style="display:none">
-                  					<th id="showid" style="">1</th>
+                  					<th id="showid" style="align:center" >1</th>
                   						<th id="id" style="display:none">1</th>
-                  						<th><input type="checkbox" value="" id="secondLevelCheckBox" style="width: 19px;height: 25px;"><font style="display:none" id="ProtectiveAve"></font>
+                  						<th align="center"><input type="checkbox" value="" id="secondLevelCheckBox" style="width: 19px;height: 25px;"><font style="display:none" id="ProtectiveAve"></font>
                   						<font style="display:none" id="ImportanceAve"></font>
                   						<font style="display:none" id="ismanul">0</font>
                   						
                   						</th>
-                  						<th id="name">糖尿病</th>
-                  						<th id="zhonghe">0.45</th>
+                  						<th id="name" align="center">糖尿病</th>
+                  						<th id="zhonghe align="center"">0.45</th>
                   						<th id="select" style="color:red;display:none;text-align:center">√</th>
                   						
                   					</tr>
