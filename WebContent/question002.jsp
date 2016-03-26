@@ -42,12 +42,12 @@
 <body>
    <ul id="questionTab" class="nav nav-tabs">
    		<li class="active"><a href="question002.jsp" >第二轮调查说明</a></li>
-   		<li ><a href="javascript:;" data-toggle="modal" data-target="#confirmModal1">第一轮调查结果</a></li> 
+   		<li ><a href="javascript:;" id="questionresult">第一轮调查结果</a></li> 
    		
    		<li ><a href="javascript:;" id="question0">第二轮填写规则</a></li>
    		<li ><a href="javascript:;" id="question1_a">重大疾病选择</a></li>
    		<li id="litesrt"><a href="javascript:;" id="question2_a">重大疾病评价</a></li>
- 		<a id="view_sick1" href="javascript:;" data-toggle="modal"  data-target="#modal_viewsick" role="button" style="display:none" class="btn btn-success btn-sm"  algin="right">查看第一轮所选择重大疾病和健康问题</a>
+ 		
 	</ul>
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -55,31 +55,31 @@
 	<br>
 		<div class="span12">
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院医药学部 “新型国家预防医学体系建立的研究”课题组开展的“全民健康与医药卫生事业国家发展战略研究”重大课题针对“我国未来20年可预防重大疾病和健康问题”的第一轮德尔菲专家法调查工作现已完成。按调查方法所述，其中仅有11项超过50%专家选择。为了进一步集中专家意见，课题组决定开展第二轮德尔菲专家法调查（下称“第二轮调查”）。</span></strong>
+				<span style="font-size:17px;line-height:180%">中国工程院医药学部 “新型国家预防医学体系建立的研究”课题组开展的“全民健康与医药卫生事业国家发展战略研究”重大课题针对“我国未来20年可预防重大疾病和健康问题”的第一轮德尔菲专家法调查工作现已完成。按调查方法所述，其中仅有11项超过50%专家选择。为了进一步集中专家意见，课题组决定开展第二轮德尔菲专家法调查（下称“第二轮调查”）。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查仅邀请第一轮调查问卷回复有效的95位专家参加。</span></strong>
+				<span style="font-size:17px;line-height:180%">第二轮调查仅邀请第一轮调查问卷回复有效的95位专家参加。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查大约需要20-30分钟，采用网络调查和纸质问卷相结合的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。</span></strong>
+				<span style="font-size:17px;line-height:180%">第二轮调查大约需要20-30分钟，采用网络调查和纸质问卷相结合的形式。系统从设计上确保他人无法得知您的咨询意见，包括管理和财务人员。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">第二轮调查候选项目清单仅限于第一轮调查中专家选择百分比超过10%的重大疾病或健康问题（共计56项）。专家只能从中选择，不能额外添加。</span></strong>
+				<span style="font-size:17px;line-height:180%">第二轮调查候选项目清单仅限于第一轮调查中专家选择百分比超过10%的重大疾病或健康问题（共计56项）。专家只能从中选择，不能额外添加。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">同时，我们将这56个项目的实际调查结果按照选择率从高到低的顺序提供给各位专家，供您在回复第二轮调查时参考。期望第二轮调查专家们的选择能够相对集中，便于我们总结提出我国未来20年可预防的重大疾病和健康问题。</span></strong>
+				<span style="font-size:17px;line-height:180%">同时，我们将这56个项目的实际调查结果按照选择率从高到低的顺序提供给各位专家，供您在回复第二轮调查时参考。期望第二轮调查专家们的选择能够相对集中，便于我们总结提出我国未来20年可预防的重大疾病和健康问题。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">请您在2016年4月30日前，完成网上问卷调查。</span></strong>
+				<span style="font-size:17px;line-height:180%">请您在2016年4月30日前，完成网上问卷调查。</span>
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">您的参与攸关我国未来预防医学体系建设。万分感谢您的参与和配合！</span></strong>
+				<span style="font-size:17px;line-height:180%">您的参与攸关我国未来预防医学体系建设。万分感谢您的参与和配合！</span>
 			</p>
 			
 		</div>
 		<div>
 			<p style="float:right">
-				&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:17px;line-height:180%">中国工程院医药学部 “新型国家预防医学体系建立的研究”课题组</span></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:17px;line-height:180%">中国工程院医药学部 “新型国家预防医学体系建立的研究”课题组</span>
 			</p>
 		</div>
 	</div>
@@ -469,6 +469,27 @@
 		    });
   	}
   });	
+  $("#questionresult").click(function(){
+	  	if($("#readrulesCheck").attr("checked")){
+	  		var backURL="question002.jsp";
+	  		var url = 'window.location.href="' + backURL+'"';
+				setTimeout(url, 100);
+	  	}else{
+	  		$.messager.show({
+			        title:'warning',
+			        msg:'<font size="3">请勾选"我已经了解调查说明",并点击按钮"下一步"</font>',
+			        timeout:2000,
+			        showType:'slide',
+			        
+			        style:{
+			            
+			        	right:'',
+			            top:"0",
+			            bottom:''
+			        }
+			    });
+	  	}
+	  });
   $("#question0").click(function(){
   	if($("#readrulesCheck").attr("checked")){
   		var backURL="question002.jsp";
@@ -498,7 +519,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'请勾选"我已经了解调查说明",并点击按钮"下一步"',
+		        msg:'<font size="3">请勾选"我已经了解调查说明",并点击按钮"下一步"</font>',
 		        timeout:2000,
 		        showType:'slide',
 		        style:{
@@ -517,7 +538,7 @@
   	}else{
   		$.messager.show({
 		        title:'warning',
-		        msg:'请勾选"我已经了解调查说明",并点击按钮"下一步"',
+		        msg:'<font size="3">请勾选"我已经了解调查说明",并点击按钮"下一步"</font>',
 		        timeout:2000,
 		        showType:'slide',
 		        style:{

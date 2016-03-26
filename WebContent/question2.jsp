@@ -94,9 +94,9 @@
                       <th>重大疾病和健康问题</th>
                       <th>熟悉程度</th>
                       <th>重大程度</th>
-                      <th>均分</th>
+                      <th width="10%">均分</th>
                       <th>可预防程度</th>
-                      <th>均分</th>
+                      <th width="10%">均分</th>
                     </tr>
                   </thead>
                   <tbody>
