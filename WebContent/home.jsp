@@ -111,7 +111,7 @@
            <br>
           <li class="active" id="personal_tab" style="display:none"><a href="#" id="personal_link"><i class="fa fa-male"></i>填写(修改)个人信息</a></li>
           
-          <li id="question_tab" style="display:none"><a href="#" id="question_link"><i class="fa fa-pencil-square-o"></i>填写问卷</a></li>
+          <li id="question_tab" style="display:none"><a href="#" id=""><i class="fa fa-pencil-square-o"></i>填写问卷</a></li>
           <li id="scan_question1_tab" style="display:none" ><a href="#" id="scan_question_link1"><i class="fa fa-pencil-square-o"></i>查看问卷（版本1）</a></li>
           <li id="scan_question2_tab" style="display:none"><a href="#" id="scan_question_link2"><i class="fa fa-pencil-square-o"></i>查看问卷（版本2）</a></li>
           <li id="account_tab" style="display:none"><a href="#" id="account_link"><i class="fa fa-cny"></i>账户信息填写</a></li>

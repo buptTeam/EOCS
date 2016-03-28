@@ -33,7 +33,7 @@
    <ul id="questionTab" class="nav nav-tabs">
    		
    		
-   		<li class="active"><a href="" >第二轮调查您填写的结果</a></li> 
+   		<li class="active"><a href="javascript:;" >第二轮调查您填写的结果</a></li> 
 	</ul>
               
               
