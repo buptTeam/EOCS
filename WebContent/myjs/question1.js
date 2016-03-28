@@ -213,18 +213,18 @@ initialnotselect=function(){
 };
 
 getSysCurrentVersion = function(){
-	var currentVersion = null;
-	$.ajax({
-		url : "hello/getsysVersion.php",
-		async:false,
-		dataType : "json",
-		success : function(data) {
-			var entity=data.entity;
-			var version = entity[0].version;
-			//console.info("currentVersion  : "+currentVersion);
-			currentVersion = version;		
-		}
-	});
+	var currentVersion = 2;
+//	$.ajax({
+//		url : "hello/getsysVersion.php",
+//		async:false,
+//		dataType : "json",
+//		success : function(data) {
+//			var entity=data.entity;
+//			var version = entity[0].version;
+//			//console.info("currentVersion  : "+currentVersion);
+//			currentVersion = version;		
+//		}
+//	});
 	return currentVersion;
 };
 

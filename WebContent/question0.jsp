@@ -285,18 +285,7 @@
 		}
 	});
 	getSysCurrentVersion = function(){
-		$.ajax({
-			url : "hello/getsysVersion.php",
-			async:false,
-			dataType : "json",
-			success : function(data) {
-				//console.info("hellofanhui");
-				var entity=data.entity;
-				var version = entity[0].version;
-				//console.info("currentVersion  : "+currentVersion);
-				currentVersion = version;		
-			}
-		});
+		var currentVersion=2;
 		return currentVersion;
 	}; 
     $("#toConfirm").click(function(){

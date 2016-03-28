@@ -61,16 +61,8 @@
     <script type="text/javascript">
 	
 	$(function(){
-		$.ajax({
-			url : "../hello/getsysVersion.php",
 
-			dataType : "json",
-			success : function(data) {
-				var entity=data.entity;
-				var currentVersion = entity[0].version;
-				$("#currentVersion").val(currentVersion);			
-			}
-		});
+		$("#currentVersion").val(2);	
 		$("#sysVersionBtn").click(function(){
 			//console.info($("#versionSelect").val());
 			$.ajax({

@@ -502,17 +502,18 @@ checkFlow = function() {
 };
 
 getSysCurrentVersion = function(){
-	$.ajax({
-		url : "hello/getsysVersion.php",
-		async:false,
-		dataType : "json",
-		success : function(data) {
-			//console.info("hellofanhui");
-			var entity=data.entity;
-			var version = entity[0].version;
-			//console.info("currentVersion  : "+currentVersion);
-			currentVersion = version;		
-		}
-	});
+//	$.ajax({
+//		url : "hello/getsysVersion.php",
+//		async:false,
+//		dataType : "json",
+//		success : function(data) {
+//			//console.info("hellofanhui");
+//			var entity=data.entity;
+//			var version = entity[0].version;
+//			//console.info("currentVersion  : "+currentVersion);
+//			currentVersion = version;		
+//		}
+//	});
+	currentVersion=2;
 	return currentVersion;
 };
