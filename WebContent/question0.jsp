@@ -7,7 +7,7 @@
 	<title> questionnaire  generating</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="dist/css/bootstrap-select.css">
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="myjs/html5.js"></script>
 	<script src="js/jquery-2.0.3.js"></script>
 	
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
